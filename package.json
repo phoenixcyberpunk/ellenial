@@ -1,0 +1,13 @@
+{
+  "name": "ellenial",
+  "private": true,
+  "description": "ellenial.app: the library page for Ellenial's free, private everyday tools.",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/fraunces": "^5.0.0",
+    "@fontsource/instrument-sans": "^5.0.0"
+  }
+}
