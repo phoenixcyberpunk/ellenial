@@ -1,0 +1,11 @@
+{
+  "_note": "The receipt's numbers, shared by every language. Update here once a month; the strings files say {name} where each one goes.",
+  "updated": "2026-10-26",
+  "ellenial_domains": "$19.98",
+  "gillefeeling_domains": "$11.25 + 25 SEK",
+  "hosting_now": "$0",
+  "vercel_pro": "$20",
+  "supabase_pro": "$25",
+  "apple": "$99",
+  "google": "$25"
+}
