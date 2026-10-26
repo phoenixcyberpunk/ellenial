@@ -39,7 +39,7 @@
   .values { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:28px 40px; }
   .values h3 { margin:0 0 6px; font-size:18px; font-weight:600; }
   .values p { margin:0; color:var(--muted); font-size:16px; }
-  @media (max-width: 600px) { .feature { padding:24px !important; } .idea { padding:32px 24px !important; } }
+  @media (max-width: 600px) { .idea { padding:32px 24px !important; } }
 </style>
 </head>
 <body>
@@ -70,24 +70,14 @@
     <p class="muted" style="margin:8px 0 0">One tool to start with. More are growing.</p>
   </div>
 
-  <article class="feature" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center; padding:32px; border-radius:24px; background:#FFFFFF; border:1px solid var(--line)">
-    <div role="img" aria-label="Placeholder for the Gillefeeling logo" style="flex:0 0 auto; width:160px; height:160px; border-radius:20px; background:#F6F0E4; border:2px dashed #C9C3EE; display:flex; align-items:center; justify-content:center; text-align:center; padding:16px; color:#3B3A8C; font-size:14px; font-weight:500">Logo coming soon</div>
-    <div style="flex:999 1 320px; min-width:0; display:flex; flex-direction:column; gap:14px">
-      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px">
-        <h3 class="serif" style="margin:0; font-weight:600; font-size:32px; color:#3B3A8C">Gillefeeling</h3>
-        <span style="padding:4px 12px; border-radius:999px; background:#ECEAFB; color:#3B3A8C; font-size:14px; font-weight:600">In alpha with friends</span>
-      </div>
-      <p style="margin:0; font-size:19px">Plan get-togethers with your friend groups, from a slow Monday afternoon to a big midsummer weekend.</p>
-      <ul class="muted" style="margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px 20px; font-size:15px">
-        <li>No account needed</li>
-        <li>No notifications, ever</li>
-        <li>Invite links that expire</li>
-        <li>Android and iPhone</li>
-      </ul>
-    </div>
-  </article>
-
   <div class="card-grid">
+    <article style="padding:24px; border-radius:20px; background:#FFFFFF; border:1px solid var(--line); display:flex; flex-direction:column; gap:10px">
+      <div role="img" aria-label="Placeholder for the Gillefeeling logo" style="width:72px; height:72px; border-radius:16px; background:#F6F0E4; border:2px dashed #C9C3EE; display:flex; align-items:center; justify-content:center; text-align:center; color:#3B3A8C; font-size:11px; font-weight:500; line-height:1.2">Logo soon</div>
+      <span style="align-self:flex-start; padding:3px 10px; border-radius:999px; background:#ECEAFB; color:#3B3A8C; font-size:13px; font-weight:600">In alpha with friends</span>
+      <h3 class="serif" style="margin:0; font-weight:600; font-size:22px; color:#3B3A8C">Gillefeeling</h3>
+      <p class="muted" style="margin:0; font-size:15px">Plan get-togethers with your friend groups, from a slow Monday afternoon to a big midsummer weekend.</p>
+      <p class="muted" style="margin:0; font-size:14px">No account needed · Android and iPhone</p>
+    </article>
     <article class="soon">
       <span class="chip">Growing</span>
       <h3 class="serif" style="margin:0; font-weight:600; font-size:22px">Cost splitting</h3>
