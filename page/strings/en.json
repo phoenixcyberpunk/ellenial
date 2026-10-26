@@ -1,39 +1,34 @@
 {
   "title": "Ellenial · Free tools for everyday life",
   "meta_description": "Small tools that make life a little easier. Free and private. No ads, no trackers, no paywalls.",
-
   "nav_aria": "Main",
-  "nav_library": "Library",
+  "nav_library": "Portfolio",
   "nav_why": "Why",
   "nav_receipt": "The receipt",
   "nav_values": "Values",
-
   "hero_eyebrow": "Free tools for everyday life",
   "hero_title": "Small tools that make life a little easier. Free and private.",
   "hero_lead": "Pick the ones you need. Nothing to pay, nothing tracked, nothing sold. What you write is locked on your phone before it goes anywhere, so not even I can read it.",
-  "hero_browse": "Browse the library",
+  "hero_browse": "Portfolio",
   "hero_costs": "See what it costs to run",
-
-  "lib_title": "The library",
+  "lib_title": "Portfolio",
   "lib_lead": "One tool to start with. More are growing.",
   "gf_logo_aria": "Placeholder for the Gillefeeling logo",
   "gf_logo_soon": "Logo soon",
   "gf_status": "In alpha with friends",
   "gf_desc": "Plan get-togethers with your friend groups, from a slow Monday afternoon to a big midsummer weekend.",
-  "gf_meta": "No account needed · Android and iPhone",
+  "gf_meta": "No account needed<br>Web-based",
   "chip_growing": "Growing",
   "split_title": "Cost splitting",
   "split_desc": "Split shared costs with friends, without the awkward maths.",
   "plant_desc": "A small reminder that your plants are thirsty.",
   "more_title": "More on the way",
-  "more_desc": "Each tool joins the library only when it feels like a real tool.",
-
+  "more_desc": "More tools are coming!",
   "why_eyebrow": "In my own words",
   "why_title": "Why?",
   "why_p1": "I got tired of downloading apps that promise to be free and to never share or sell my data, but then have micro-transactions for basic features, unreasonably high costs, or can only be used with a subscription. I've literally spent hours unchecking hundreds of trackers and cookies just to use a free app.",
   "why_p2": "In the growing world of technology, AI is here to stay, so I started investigating its capabilities myself. The hard lines were the easiest part: no AI-generated art, no paywalls, minimal storing of private data (reducing both costs and risks) and, when needed, always encrypted. Whatever solution I found would have to support this.",
   "why_p3": "I started creating an app for myself to understand the limits and was honestly surprised. I realised I could make something out of this and make my life easier. That's where the idea was born to go public, not to make money, but to give back to the community. It's a small niche, but hopefully it can add something to your everyday life.",
-
   "receipt_eyebrow": "The receipt",
   "receipt_title": "What it costs to run, in the open.",
   "receipt_lead": "Breaking even is the goal, never profit. If the costs grow, you'll see it here first.",
@@ -56,7 +51,6 @@
   "r_stores_label": "App stores, only if I ever go there",
   "r_stores_value": "{apple} a year (Apple) + {google} once (Google)",
   "receipt_updated": "Last updated {updated} · prices in USD unless marked SEK, before tax",
-
   "values_title": "What every tool stands for",
   "v1_title": "Free, never paywalled",
   "v1_text": "Every tool is free. If you'd like to chip in, it's on your terms.",
@@ -70,12 +64,10 @@
   "v5_text": "The art, the care and the decisions are mine. AI helps me write the code.",
   "v6_title": "Costs in the open",
   "v6_text": "The receipt above is updated every month. Making profits will never be the goal.",
-
   "idea_title": "Have an idea for a new app?",
   "idea_lead": "Tell me! The best small tools start with someone saying “I wish there was an app for this.”",
   "idea_button": "Share your idea",
   "idea_message": "Oh, you found it! I'm still working out how to receive ideas. Check back soon ❤️",
-
   "footer_tagline": "Being human is enough.",
   "footer_made": "Made by Ellen",
   "footer_code": "Code on GitHub"
