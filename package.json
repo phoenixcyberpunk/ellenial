@@ -7,7 +7,7 @@
     "build": "node build.mjs"
   },
   "devDependencies": {
-    "@fontsource/fraunces": "^5.0.0",
-    "@fontsource/instrument-sans": "^5.0.0"
+    "@fontsource/dm-sans": "^5.1.0",
+    "@fontsource/fraunces": "^5.0.0"
   }
 }
