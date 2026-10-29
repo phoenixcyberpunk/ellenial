@@ -54,6 +54,22 @@
   .card-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:20px; }
   .soon { padding:24px; border-radius:20px; border:1.5px dashed var(--line-strong); display:flex; flex-direction:column; gap:10px; }
   .chip { align-self:flex-start; padding:3px 10px; border-radius:999px; background:var(--soft); color:var(--muted); font-size:13px; font-weight:600; }
+  /* Early-test apps: soft-launched with a working link and an honest label. The tile uses the app's own icon colour. */
+  .app { padding:24px; border-radius:20px; background:var(--surface); border:1px solid var(--line); display:flex; flex-direction:column; gap:10px; }
+  .tile { width:72px; height:72px; border-radius:16px; display:flex; align-items:flex-end; padding:8px; color:#342E86; font-size:15px; line-height:1; }
+  .early { align-self:flex-start; padding:3px 10px; border-radius:999px; background:var(--soft); color:var(--muted); font-size:13px; font-weight:600; }
+  .app h3 { margin:0; font-weight:500; font-size:22px; color:var(--accent); }
+  .app .desc { margin:0; font-size:15px; }
+  /* Phones: two columns, smaller cards, so the whole library fits in about one screen. */
+  @media (max-width: 600px) {
+    #library .card-grid { grid-template-columns:1fr 1fr; gap:10px; }
+    .app { padding:14px; border-radius:16px; gap:6px; }
+    .tile { width:44px; height:44px; border-radius:11px; padding:5px; font-size:10px; }
+    .app h3 { font-size:18px; }
+    .app .desc { font-size:13px; line-height:1.4; }
+    .early, #library .app > span { font-size:11px !important; padding:2px 8px !important; }
+    #library .app > .tile { margin-bottom:2px; }
+  }
   .row { display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid var(--line); }
   .row b { font-weight:600; text-align:right; }
   .values { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:28px 40px; }
@@ -96,26 +112,45 @@
   </div>
 
   <div class="card-grid">
-    <article style="padding:24px; border-radius:20px; background:var(--surface); border:1px solid var(--line); display:flex; flex-direction:column; gap:10px">
-      <div role="img" aria-label="{{gf_logo_aria}}" style="width:72px; height:72px; border-radius:16px; background:var(--soft); border:2px dashed var(--flower); display:flex; align-items:center; justify-content:center; text-align:center; color:var(--accent); font-size:11px; font-weight:500; line-height:1.2">{{gf_logo_soon}}</div>
+    <article class="app">
+      <div class="tile" role="img" aria-label="{{gf_logo_aria}}" style=" border-radius:16px; background:var(--soft); border:2px dashed var(--flower); display:flex; align-items:center; justify-content:center; text-align:center; color:var(--accent); font-size:11px; font-weight:500; line-height:1.2">{{gf_logo_soon}}</div>
       <span style="align-self:flex-start; padding:3px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent); font-size:13px; font-weight:600">{{gf_status}}</span>
-      <h3 class="serif" style="margin:0; font-weight:500; font-size:22px; color:var(--accent)">Gillefeeling</h3>
-      <p class="muted" style="margin:0; font-size:15px">{{gf_desc}}</p>
-      <p class="muted" style="margin:0; font-size:14px">{{gf_meta}}</p>
+      <h3 class="serif">Gillefeeling</h3>
+      <p class="muted desc">{{gf_desc}}</p>
     </article>
-    <article class="soon">
-      <span class="chip">{{chip_growing}}</span>
-      <h3 class="serif" style="margin:0; font-weight:500; font-size:22px">{{split_title}}</h3>
-      <p class="muted" style="margin:0; font-size:15px">{{split_desc}}</p>
+    <article class="app">
+      <div class="tile serif" style="background:#D3E2EC" aria-hidden="true">{{weather_tile}}</div>
+      <span class="early">{{chip_early}}</span>
+      <h3 class="serif">Weather</h3>
+      <p class="muted desc">{{weather_desc}}</p>
     </article>
-    <article class="soon">
-      <span class="chip">{{chip_growing}}</span>
-      <h3 class="serif" style="margin:0; font-weight:500; font-size:22px">Plant Buddy</h3>
-      <p class="muted" style="margin:0; font-size:15px">{{plant_desc}}</p>
+    <article class="app">
+      <div class="tile serif" style="background:#D5E3D6" aria-hidden="true">{{maps_tile}}</div>
+      <span class="early">{{chip_early}}</span>
+      <h3 class="serif">ellenial maps</h3>
+      <p class="muted desc">{{maps_desc}}</p>
     </article>
-    <article style="padding:24px; border-radius:20px; background:var(--soft); display:flex; flex-direction:column; gap:10px; justify-content:center">
-      <h3 class="serif" style="margin:0; font-weight:500; font-size:22px">{{more_title}}</h3>
-      <p class="muted" style="margin:0; font-size:15px">{{more_desc}}</p>
+    <article class="app">
+      <div class="tile serif" style="background:#F2D6C4" aria-hidden="true">{{lunch_tile}}</div>
+      <span class="early">{{chip_early}}</span>
+      <h3 class="serif">Luncheon</h3>
+      <p class="muted desc">{{lunch_desc}}</p>
+    </article>
+    <article class="app">
+      <div class="tile serif" style="background:#F3E3B5" aria-hidden="true">{{party_tile}}</div>
+      <span class="early">{{chip_early}}</span>
+      <h3 class="serif">Party games</h3>
+      <p class="muted desc">{{party_desc}}</p>
+    </article>
+    <article class="app">
+      <div class="tile serif" style="background:#F0D5DC" aria-hidden="true">{{split_tile}}</div>
+      <span class="early">{{chip_early}}</span>
+      <h3 class="serif">{{split_title}}</h3>
+      <p class="muted desc">{{split_desc}}</p>
+    </article>
+    <article class="app more" style="background:var(--soft); border:0; justify-content:center">
+      <h3 class="serif" style="color:var(--ink)">{{more_title}}</h3>
+      <p class="muted desc">{{more_desc}}</p>
     </article>
   </div>
 </section>
