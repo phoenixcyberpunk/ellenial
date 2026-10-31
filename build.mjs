@@ -6,10 +6,10 @@
 // The build stops if any language is missing a text, so a page can never go live half translated.
 import { cpSync, mkdirSync, rmSync, copyFileSync, readFileSync, writeFileSync } from 'node:fs'
 
-// Same type as Gillefeeling: Fraunces for headings, DM Sans for text.
+// Same type as Gillefeeling: Fraunces for headings, Instrument Sans for text.
 const FONTS = [
   ['fraunces', [500]],
-  ['dm-sans', [400, 500, 600]],
+  ['instrument-sans', [400, 500, 600]],
 ]
 
 // The first language is the default and lives at the root.
