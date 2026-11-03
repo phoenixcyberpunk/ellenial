@@ -71,5 +71,10 @@
   "maps_desc": "Kartor med fokus på avkoppling, grönområden och sociala platser. Med hundläge du kan slå av och på.",
   "lunch_desc": "Alla lunchmenyer runt Lindholmen. Snart: rösta via säkra länkar.",
   "party_desc": "Sällskapsspel för hela familjen, fungerar offline.",
-  "quiz_desc": "Quiz att köra tillsammans, på en delad skärm eller med var sin mobil. Gör egna quiz."
+  "quiz_desc": "Quiz att köra tillsammans, på en delad skärm eller med var sin mobil. Gör egna quiz.",
+  "theme_label": "Tema",
+  "theme_auto": "Auto",
+  "theme_light": "Ljust",
+  "theme_dark": "Mörkt",
+  "theme_auto_hint": "Följer telefonen"
 }
