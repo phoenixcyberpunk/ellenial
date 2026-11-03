@@ -25,6 +25,8 @@ Build locally: `npm install && npm run build`, then open `dist/index.html`.
 
 ## Credits
 
+`credits.json` lists every free and open project the Ellenial apps build on: licence, the exact credit line, which apps use it and how to support it. It will feed ellenial.app/thanks and each app's credit lines. Paid services (Vercel, Supabase, Claude) are on the receipt instead.
+
 - [Fraunces](https://github.com/undercasetype/Fraunces) by Undercase Type and [DM Sans](https://github.com/googlefonts/dm-fonts) by Colophon Foundry, both under the SIL Open Font License, via [Fontsource](https://fontsource.org).
 
 ## Licence

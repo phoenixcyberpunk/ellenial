@@ -1,0 +1,267 @@
+{
+  "about": "Ellenial credits, draft 3 Nov 2026. One file feeds the credit line where data shows, each app's Settings, and ellenial.app/thanks. Only free and open projects are thanked here; paid services (Vercel, Supabase, Claude) live on the receipt.",
+  "fields": {
+    "type": "data | map | photos | code | font | facts",
+    "required": "true when the licence asks for a visible credit where the content is shown",
+    "credit": "the exact short line to show in the app",
+    "support": "where people can give back; null when there's no donation route",
+    "check": "anything still to confirm before publishing"
+  },
+  "credits": [
+    {
+      "id": "openstreetmap",
+      "name": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/copyright",
+      "type": "data",
+      "licence": "ODbL 1.0",
+      "required": true,
+      "credit": "© OpenStreetMap contributors",
+      "apps": [
+        "maps",
+        "luncheon"
+      ],
+      "support": "https://supporting.openstreetmap.org",
+      "check": null
+    },
+    {
+      "id": "geofabrik",
+      "name": "Geofabrik",
+      "url": "https://download.geofabrik.de",
+      "type": "data",
+      "licence": "Free download of OpenStreetMap data (ODbL)",
+      "required": false,
+      "credit": "OpenStreetMap extract by Geofabrik",
+      "apps": [
+        "maps"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
+      "id": "openfreemap",
+      "name": "OpenFreeMap",
+      "url": "https://openfreemap.org",
+      "type": "map",
+      "licence": "Free map tiles, built on OpenMapTiles",
+      "required": true,
+      "credit": "Map tiles: OpenFreeMap, OpenMapTiles",
+      "apps": [
+        "maps"
+      ],
+      "support": "https://github.com/sponsors/hyperknot",
+      "check": "Confirm the support link"
+    },
+    {
+      "id": "wikimedia-commons",
+      "name": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org",
+      "type": "photos",
+      "licence": "Per photo (CC BY, CC BY-SA, CC0)",
+      "required": true,
+      "credit": "Photo: {author}, {licence}, via Wikimedia Commons",
+      "apps": [
+        "maps"
+      ],
+      "support": "https://donate.wikimedia.org",
+      "check": "Keep each photo's author and licence when the M1 fix moves photos into the build"
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org",
+      "type": "data",
+      "licence": "CC0",
+      "required": false,
+      "credit": "Place facts from Wikidata",
+      "apps": [
+        "maps"
+      ],
+      "support": "https://donate.wikimedia.org",
+      "check": null
+    },
+    {
+      "id": "smhi",
+      "name": "SMHI Open Data",
+      "url": "https://www.smhi.se/en/services/open-data",
+      "type": "data",
+      "licence": "CC BY 4.0",
+      "required": true,
+      "credit": "Data: SMHI, CC BY 4.0",
+      "apps": [
+        "weather",
+        "quiz"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
+      "id": "met-norway",
+      "name": "MET Norway",
+      "url": "https://api.met.no",
+      "type": "data",
+      "licence": "CC BY 4.0 / NLOD",
+      "required": true,
+      "credit": "Data: MET Norway, CC BY 4.0",
+      "apps": [
+        "weather"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
+      "id": "open-meteo",
+      "name": "Open-Meteo",
+      "url": "https://open-meteo.com",
+      "type": "data",
+      "licence": "CC BY 4.0 (data); free API is for non-commercial use",
+      "required": true,
+      "credit": "Weather models via Open-Meteo (ECMWF, DWD ICON, DMI, NOAA GFS), CC BY 4.0",
+      "apps": [
+        "weather"
+      ],
+      "support": null,
+      "check": "Before launch: confirm a free tool with a Donate button still counts as non-commercial"
+    },
+    {
+      "id": "goteborg-co",
+      "name": "Göteborg & Co",
+      "url": "https://www.goteborg.com/guider/hundvanliga-goteborg",
+      "type": "facts",
+      "licence": "Facts, rewritten by hand",
+      "required": false,
+      "credit": "Dog rules: Göteborg & Co",
+      "apps": [
+        "maps"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
+      "id": "maplibre",
+      "name": "MapLibre GL JS",
+      "url": "https://maplibre.org",
+      "type": "code",
+      "licence": "BSD-3-Clause",
+      "required": false,
+      "credit": "Map engine: MapLibre",
+      "apps": [
+        "maps"
+      ],
+      "support": "https://opencollective.com/maplibre",
+      "check": null
+    },
+    {
+      "id": "osmium",
+      "name": "osmium-tool",
+      "url": "https://osmcode.org/osmium-tool/",
+      "type": "code",
+      "licence": "GPL-3.0",
+      "required": false,
+      "credit": "Map data prepared with osmium",
+      "apps": [
+        "maps"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
+      "id": "lucide",
+      "name": "Lucide",
+      "url": "https://lucide.dev",
+      "type": "code",
+      "licence": "ISC",
+      "required": false,
+      "credit": "Icons: Lucide",
+      "apps": [
+        "maps"
+      ],
+      "support": "https://opencollective.com/lucide-icons",
+      "check": "Confirm the support link"
+    },
+    {
+      "id": "qrcode-generator",
+      "name": "qrcode-generator by Kazuhiko Arase",
+      "url": "https://github.com/kazuhikoarase/qrcode-generator",
+      "type": "code",
+      "licence": "MIT",
+      "required": false,
+      "credit": "QR codes: qrcode-generator by Kazuhiko Arase",
+      "apps": [
+        "quiz",
+        "poll",
+        "split",
+        "gillefeeling"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
+      "id": "fraunces",
+      "name": "Fraunces",
+      "url": "https://github.com/undercasetype/Fraunces",
+      "type": "font",
+      "licence": "SIL Open Font License 1.1",
+      "required": false,
+      "credit": "Fraunces by Undercase Type",
+      "apps": [
+        "site",
+        "maps",
+        "weather",
+        "luncheon",
+        "party-games",
+        "quiz",
+        "poll",
+        "split",
+        "gillefeeling"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
+      "id": "dm-sans",
+      "name": "DM Sans",
+      "url": "https://github.com/googlefonts/dm-fonts",
+      "type": "font",
+      "licence": "SIL Open Font License 1.1",
+      "required": false,
+      "credit": "DM Sans by Colophon Foundry",
+      "apps": [
+        "site",
+        "maps",
+        "weather",
+        "luncheon",
+        "party-games",
+        "quiz",
+        "poll",
+        "split",
+        "gillefeeling"
+      ],
+      "support": null,
+      "check": "Gillefeeling live still uses Instrument Sans (DM Sans waits on staging)"
+    },
+    {
+      "id": "fontsource",
+      "name": "Fontsource",
+      "url": "https://fontsource.org",
+      "type": "code",
+      "licence": "MIT",
+      "required": false,
+      "credit": "Self-hosted fonts via Fontsource",
+      "apps": [
+        "site",
+        "maps",
+        "split",
+        "gillefeeling"
+      ],
+      "support": "https://opencollective.com/fontsource",
+      "check": null
+    }
+  ],
+  "libraries": "Each app's other open-source libraries (React, supabase-js, Vite and so on) come from a generated list per app: 'Built with N open-source libraries'.",
+  "left_out": {
+    "Panoramax, Open Prices, Open Food Facts": "On the 29 Oct idea list but no app uses them yet; add when one does.",
+    "lindholmenlunch.nu": "Not used. Luncheon reads each restaurant's own website.",
+    "Restaurants' own websites": "Luncheon links each menu back to its source; not part of /thanks.",
+    "Vercel, Supabase, Claude": "Paid services: on the receipt, not here (decided 3 Nov)."
+  }
+}
