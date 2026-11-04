@@ -80,21 +80,19 @@
   /* Divider between the library and "In my own words": they share a background, so the eye needs a cue. */
   .section-break { display:flex; align-items:center; gap:16px; padding-bottom:calc(var(--section) * .75); }
   .section-break::before, .section-break::after { content:""; flex:1; height:1px; background:var(--periwinkle); }
-  /* The receipt: one line per cost. Name and what it is on the left, amount and how often on the right. */
-  .receipt { flex:999 1 420px; min-width:0; padding:28px; border-radius:20px; background:var(--card); border:1px solid var(--line); }
-  .rc-group { margin:0; padding-bottom:4px; font-size:13px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--indigo); }
-  .rc-group + .rc-list { margin-bottom:28px; }
-  .rc-list { list-style:none; margin:0; padding:0; }
-  .rc-item { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:14px 0; border-bottom:1px solid var(--line); }
-  .rc-item > div:first-child { min-width:0; }
-  .rc-what { display:block; font-weight:500; }
-  .rc-why { display:block; margin-top:2px; color:var(--muted); font-size:14px; line-height:1.4; }
-  .rc-amt { flex:none; text-align:right; }
-  .rc-amt b { display:block; font-weight:500; font-variant-numeric:tabular-nums; white-space:nowrap; }
-  .rc-amt span { display:block; margin-top:2px; color:var(--muted); font-size:14px; white-space:nowrap; }
-  .rc-in .rc-what, .rc-in .rc-amt b { font-weight:400; color:var(--muted); }
-  .rc-foot { margin:0; padding-top:16px; color:var(--muted); font-size:14px; }
-  @media (max-width:600px) { .receipt { padding:20px; } }
+  /* The receipt: one compact table, like a spreadsheet. Item, cost, how often. */
+  .receipt { flex:999 1 420px; min-width:0; padding:24px; border-radius:20px; background:var(--card); border:1px solid var(--line); }
+  .rc { width:100%; border-collapse:collapse; font-size:15px; }
+  .rc th, .rc td { padding:8px 10px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+  .rc th[scope="row"] { font-weight:500; }
+  .rc thead th { font-size:13px; font-weight:600; color:var(--muted); }
+  .rc .num { text-align:right; font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .rc td:last-child { color:var(--muted); white-space:nowrap; }
+  .rc-group th { background:var(--lavender); color:var(--indigo); font-size:13px; font-weight:600; letter-spacing:1px; text-transform:uppercase; }
+  .rc-in th, .rc-in .num { color:var(--muted); font-weight:500; }
+  .rc-foot { margin:0; padding-top:12px; color:var(--muted); font-size:14px; }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  @media (max-width:600px) { .receipt { padding:14px; } .rc { font-size:14px; } .rc th, .rc td { padding:7px 6px; } }
   .values { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:28px 40px; }
   .values h3 { margin:0 0 6px; font-size:17px; font-weight:500; }
   .values p { margin:0; color:var(--muted); font-size:16px; }
@@ -216,23 +214,27 @@
       <p class="muted" style="margin:0">{{receipt_lead}}</p>
     </div>
     <div class="receipt">
-      <h3 class="rc-group">{{paid_so_far}}</h3>
-      <ul class="rc-list">
-        <li class="rc-item"><div><span class="rc-what">{{r_claude_pro_label}}</span><span class="rc-why">{{r_claude_pro_note}}</span></div><div class="rc-amt"><b>{{r_claude_pro_value}}</b><span>{{r_claude_pro_when}}</span></div></li>
-        <li class="rc-item"><div><span class="rc-what">{{r_claude_max_label}}</span><span class="rc-why">{{r_claude_max_note}}</span></div><div class="rc-amt"><b>{{r_claude_max_value}}</b><span>{{r_claude_max_when}}</span></div></li>
-        <li class="rc-item"><div><span class="rc-what">{{r_ellenial_label}}</span><span class="rc-why">ellenial.app, ellenial.org</span></div><div class="rc-amt"><b>{{r_ellenial_value}}</b><span>{{r_first_year}}</span></div></li>
-        <li class="rc-item"><div><span class="rc-what">{{r_gfcom_label}}</span><span class="rc-why">gillefeeling.com</span></div><div class="rc-amt"><b>{{r_gfcom_value}}</b><span>{{r_first_year}}</span></div></li>
-        <li class="rc-item"><div><span class="rc-what">{{r_gfse_label}}</span><span class="rc-why">gillefeeling.se</span></div><div class="rc-amt"><b>{{r_gfse_value}}</b><span>{{r_first_year}}</span></div></li>
-        <li class="rc-item"><div><span class="rc-what">{{r_hosting_label}}</span><span class="rc-why">{{r_hosting_note}}</span></div><div class="rc-amt"><b>{{r_hosting_value}}</b></div></li>
-        <li class="rc-item rc-in"><div><span class="rc-what">{{r_donations_label}}</span></div><div class="rc-amt"><b>{{r_donations_value}}</b></div></li>
-      </ul>
-      <h3 class="rc-group">{{coming_launch}}</h3>
-      <ul class="rc-list">
-        <li class="rc-item"><div><span class="rc-what">{{r_vercel_label}}</span><span class="rc-why">{{r_vercel_note}}</span></div><div class="rc-amt"><b>{{r_vercel_value}}</b><span>{{r_a_month}}</span></div></li>
-        <li class="rc-item"><div><span class="rc-what">{{r_supabase_label}}</span><span class="rc-why">{{r_supabase_note}}</span></div><div class="rc-amt"><b>{{r_supabase_value}}</b><span>{{r_a_month}}</span></div></li>
-        <li class="rc-item"><div><span class="rc-what">{{r_apple_label}}</span><span class="rc-why">{{r_stores_note}}</span></div><div class="rc-amt"><b>{{r_apple_value}}</b><span>{{r_a_year}}</span></div></li>
-        <li class="rc-item"><div><span class="rc-what">{{r_google_label}}</span><span class="rc-why">{{r_stores_note}}</span></div><div class="rc-amt"><b>{{r_google_value}}</b><span>{{r_once}}</span></div></li>
-      </ul>
+      <table class="rc">
+        <caption class="sr-only">{{receipt_title}}</caption>
+        <thead><tr><th scope="col">{{r_col_item}}</th><th scope="col" class="num">{{r_col_cost}}</th><th scope="col">{{r_col_per}}</th></tr></thead>
+        <tbody>
+          <tr class="rc-group"><th colspan="3" scope="rowgroup">{{paid_so_far}}</th></tr>
+          <tr><th scope="row">{{r_claude_pro_label}}</th><td class="num">{{r_claude_pro_value}}</td><td>{{r_a_month}}</td></tr>
+          <tr><th scope="row">{{r_claude_max_label}}</th><td class="num">{{r_claude_max_value}}</td><td>{{r_once}}</td></tr>
+          <tr><th scope="row">{{r_ellenial_label}}</th><td class="num">{{r_ellenial_value}}</td><td>{{r_first_year}}</td></tr>
+          <tr><th scope="row">{{r_gfcom_label}}</th><td class="num">{{r_gfcom_value}}</td><td>{{r_first_year}}</td></tr>
+          <tr><th scope="row">{{r_gfse_label}}</th><td class="num">{{r_gfse_value}}</td><td>{{r_first_year}}</td></tr>
+          <tr><th scope="row">{{r_hosting_label}}</th><td class="num">{{r_hosting_value}}</td><td></td></tr>
+          <tr class="rc-in"><th scope="row">{{r_donations_label}}</th><td class="num">{{r_donations_value}}</td><td></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="rc-group"><th colspan="3" scope="rowgroup">{{coming_launch}}</th></tr>
+          <tr><th scope="row">{{r_vercel_label}}</th><td class="num">{{r_vercel_value}}</td><td>{{r_a_month}}</td></tr>
+          <tr><th scope="row">{{r_supabase_label}}</th><td class="num">{{r_supabase_value}}</td><td>{{r_a_month}}</td></tr>
+          <tr><th scope="row">{{r_apple_label}}</th><td class="num">{{r_apple_value}}</td><td>{{r_a_year}}</td></tr>
+          <tr><th scope="row">{{r_google_label}}</th><td class="num">{{r_google_value}}</td><td>{{r_once}}</td></tr>
+        </tbody>
+      </table>
       <p class="rc-foot">{{receipt_updated}}</p>
     </div>
   </div>
