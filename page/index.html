@@ -44,16 +44,16 @@
   h1 { margin:0; max-width:820px; font-weight:500; font-size:clamp(28px, 4.5vw, 44px); line-height:1.1; letter-spacing:-0.8px; }
   h2 { margin:0; font-weight:500; font-size:clamp(24px, 3.6vw, 32px); line-height:1.15; letter-spacing:-0.5px; }
   .muted { color:var(--muted); }
-  .btn { display:inline-flex; align-items:center; min-height:44px; padding:0 20px; border-radius:999px; text-decoration:none; font-weight:600; font:inherit; font-weight:600; cursor:pointer; }
+  .btn { display:inline-flex; align-items:center; min-height:44px; padding:0 20px; border-radius:999px; text-decoration:none; font:inherit; font-weight:500; cursor:pointer; }
   .btn-primary { background:var(--indigo); color:var(--on-indigo); border:0; } .btn-primary:hover { color:var(--on-indigo); opacity:.9; }
   .btn-line { border:1.5px solid var(--indigo); }
   .site-header { padding-top:20px; padding-bottom:20px; display:flex; flex-wrap:wrap; align-items:center; gap:12px 16px; }
   .logo { margin-right:auto; font-size:26px; font-weight:500; letter-spacing:-0.5px; text-decoration:none; }
   .nav { display:flex; flex-wrap:wrap; gap:4px; }
-  .nav a { padding:10px 14px; border-radius:999px; text-decoration:none; font-weight:500; }
+  .nav a { padding:10px 14px; border-radius:999px; text-decoration:none; font-weight:400; }
   /* Language switch: real links, so it works without scripts and each language has its own address. */
   .lang { display:flex; padding:3px; border-radius:999px; border:1.5px solid var(--indigo); }
-  .lang a { min-width:44px; min-height:38px; display:flex; align-items:center; justify-content:center; padding:0 12px; border-radius:999px; text-decoration:none; font-size:14px; font-weight:600; letter-spacing:1px; }
+  .lang a { min-width:44px; min-height:38px; display:flex; align-items:center; justify-content:center; padding:0 12px; border-radius:999px; text-decoration:none; font-size:14px; font-weight:500; letter-spacing:1px; }
   .lang a[aria-current="page"] { background:var(--indigo); color:var(--on-indigo); }
   /* On phones the logo and the switch share the top row, the menu goes underneath. */
   @media (max-width: 720px) { .site-header { padding-top:14px; padding-bottom:8px; } .logo { font-size:22px; } .nav { order:3; width:100%; margin-left:-8px; gap:0; } .nav a { padding:8px; font-size:15px; } .lang a { min-height:34px; font-size:13px; } }
@@ -87,16 +87,16 @@
   .rc-list { list-style:none; margin:0; padding:0; }
   .rc-item { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:14px 0; border-bottom:1px solid var(--line); }
   .rc-item > div:first-child { min-width:0; }
-  .rc-what { display:block; font-weight:600; }
+  .rc-what { display:block; font-weight:500; }
   .rc-why { display:block; margin-top:2px; color:var(--muted); font-size:14px; line-height:1.4; }
   .rc-amt { flex:none; text-align:right; }
-  .rc-amt b { display:block; font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .rc-amt b { display:block; font-weight:500; font-variant-numeric:tabular-nums; white-space:nowrap; }
   .rc-amt span { display:block; margin-top:2px; color:var(--muted); font-size:14px; white-space:nowrap; }
-  .rc-in .rc-what, .rc-in .rc-amt b { font-weight:500; color:var(--muted); }
+  .rc-in .rc-what, .rc-in .rc-amt b { font-weight:400; color:var(--muted); }
   .rc-foot { margin:0; padding-top:16px; color:var(--muted); font-size:14px; }
   @media (max-width:600px) { .receipt { padding:20px; } }
   .values { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:28px 40px; }
-  .values h3 { margin:0 0 6px; font-size:18px; font-weight:600; }
+  .values h3 { margin:0 0 6px; font-size:17px; font-weight:500; }
   .values p { margin:0; color:var(--muted); font-size:16px; }
   @media (max-width: 600px) { .idea { padding:32px 24px !important; } }
   /* Theme switch in the footer, same look as in ellenial maps. Shown only when scripts run. */
