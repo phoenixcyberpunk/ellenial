@@ -45,8 +45,6 @@
   h2 { margin:0; font-weight:500; font-size:clamp(24px, 3.6vw, 32px); line-height:1.15; letter-spacing:-0.5px; }
   .muted { color:var(--muted); }
   .btn { display:inline-flex; align-items:center; min-height:44px; padding:0 20px; border-radius:999px; text-decoration:none; font:inherit; font-weight:500; cursor:pointer; }
-  .btn-primary { background:var(--indigo); color:var(--on-indigo); border:0; } .btn-primary:hover { color:var(--on-indigo); opacity:.9; }
-  .btn-line { border:1.5px solid var(--indigo); }
   .site-header { padding-top:20px; padding-bottom:20px; display:flex; flex-wrap:wrap; align-items:center; gap:12px 16px; }
   .logo { margin-right:auto; font-size:26px; font-weight:500; letter-spacing:-0.5px; text-decoration:none; }
   .nav { display:flex; flex-wrap:wrap; gap:4px; }
@@ -125,10 +123,6 @@
   <p class="eyebrow">{{hero_eyebrow}}</p>
   <h1 class="serif">{{hero_title}}</h1>
   <p class="muted lead">{{hero_lead}}</p>
-  <div style="display:flex; flex-wrap:wrap; gap:12px; padding-top:8px">
-    <a href="#library" class="btn btn-primary">{{hero_browse}}</a>
-    <a href="#receipt" class="btn btn-line">{{hero_costs}}</a>
-  </div>
 </section>
 
 <section id="library" class="wrap" style="padding-bottom:var(--section); display:flex; flex-direction:column; gap:24px">
