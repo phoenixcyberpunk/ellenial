@@ -78,5 +78,7 @@
   "theme_dark": "Mörkt",
   "theme_auto_hint": "Följer telefonen",
   "poll_desc": "Ett enkelt verktyg för snabba omröstningar.",
-  "chip_alpha": "Alfa"
+  "chip_alpha": "Alfa",
+  "r_claude_label": "Claude, AI:n som hjälper mig skriva koden",
+  "r_claude_value": "{claude_pro} i månaden (Pro) + {claude_max} för en månad Max, inkl. moms"
 }

@@ -78,5 +78,7 @@
   "theme_dark": "Dark",
   "theme_auto_hint": "Follows your phone",
   "poll_desc": "Easy polling tool for simple polling purposes.",
-  "chip_alpha": "Alpha"
+  "chip_alpha": "Alpha",
+  "r_claude_label": "Claude, the AI that helps me write the code",
+  "r_claude_value": "{claude_pro} a month (Pro) + {claude_max} for one Max month, incl. VAT"
 }
