@@ -96,5 +96,5 @@
   "r_a_month": "a month",
   "r_a_year": "a year",
   "r_once": "once",
-  "receipt_updated": "Last updated {updated} · all prices include 25% VAT, which I pay · USD unless marked SEK"
+  "receipt_updated": "Last updated {updated} · incl. VAT"
 }
