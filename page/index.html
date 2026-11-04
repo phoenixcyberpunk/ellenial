@@ -76,8 +76,21 @@
   /* Divider between the library and "In my own words": they share a background, so the eye needs a cue. */
   .section-break { display:flex; align-items:center; gap:16px; padding-bottom:72px; }
   .section-break::before, .section-break::after { content:""; flex:1; height:1px; background:var(--periwinkle); }
-  .row { display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid var(--line); }
-  .row b { font-weight:600; text-align:right; }
+  /* The receipt: one line per cost. Name and what it is on the left, amount and how often on the right. */
+  .receipt { flex:999 1 420px; min-width:0; padding:28px; border-radius:20px; background:var(--card); border:1px solid var(--line); }
+  .rc-group { margin:0; padding-bottom:4px; font-size:13px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--indigo); }
+  .rc-group + .rc-list { margin-bottom:28px; }
+  .rc-list { list-style:none; margin:0; padding:0; }
+  .rc-item { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:14px 0; border-bottom:1px solid var(--line); }
+  .rc-item > div:first-child { min-width:0; }
+  .rc-what { display:block; font-weight:600; }
+  .rc-why { display:block; margin-top:2px; color:var(--muted); font-size:14px; line-height:1.4; }
+  .rc-amt { flex:none; text-align:right; }
+  .rc-amt b { display:block; font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .rc-amt span { display:block; margin-top:2px; color:var(--muted); font-size:14px; white-space:nowrap; }
+  .rc-in .rc-what, .rc-in .rc-amt b { font-weight:500; color:var(--muted); }
+  .rc-foot { margin:0; padding-top:16px; color:var(--muted); font-size:14px; }
+  @media (max-width:600px) { .receipt { padding:20px; } }
   .values { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:28px 40px; }
   .values h3 { margin:0 0 6px; font-size:18px; font-weight:600; }
   .values p { margin:0; color:var(--muted); font-size:16px; }
@@ -198,19 +211,25 @@
       <h2 class="serif">{{receipt_title}}</h2>
       <p class="muted" style="margin:0">{{receipt_lead}}</p>
     </div>
-    <div style="flex:999 1 420px; min-width:0; padding:28px; border-radius:20px; background:var(--card); border:1px solid var(--line)">
-      <p class="eyebrow" style="font-size:13px">{{paid_so_far}}</p>
-      <div class="row"><span>{{r_ellenial_label}}</span><b>{{r_ellenial_value}}</b></div>
-      <div class="row"><span>{{r_gf_label}}</span><b>{{r_gf_value}}</b></div>
-      <div class="row"><span>{{r_hosting_label}}</span><b>{{r_hosting_value}}</b></div>
-      <div class="row"><span>{{r_claude_label}}</span><b>{{r_claude_value}}</b></div>
-      <div class="row"><span>{{r_data_label}}</span><b>{{r_data_value}}</b></div>
-      <div class="row"><span>{{r_donations_label}}</span><b>{{r_donations_value}}</b></div>
-      <p class="eyebrow" style="font-size:13px; padding-top:28px">{{coming_launch}}</p>
-      <div class="row"><span>{{r_vercel_label}}</span><b>{{r_vercel_value}}</b></div>
-      <div class="row"><span>{{r_supabase_label}}</span><b>{{r_supabase_value}}</b></div>
-      <div class="row"><span>{{r_stores_label}}</span><b>{{r_stores_value}}</b></div>
-      <p class="muted" style="margin:0; padding-top:16px; font-size:14px">{{receipt_updated}}</p>
+    <div class="receipt">
+      <h3 class="rc-group">{{paid_so_far}}</h3>
+      <ul class="rc-list">
+        <li class="rc-item"><div><span class="rc-what">{{r_claude_pro_label}}</span><span class="rc-why">{{r_claude_pro_note}}</span></div><div class="rc-amt"><b>{{r_claude_pro_value}}</b><span>{{r_claude_pro_when}}</span></div></li>
+        <li class="rc-item"><div><span class="rc-what">{{r_claude_max_label}}</span><span class="rc-why">{{r_claude_max_note}}</span></div><div class="rc-amt"><b>{{r_claude_max_value}}</b><span>{{r_claude_max_when}}</span></div></li>
+        <li class="rc-item"><div><span class="rc-what">{{r_ellenial_label}}</span><span class="rc-why">ellenial.app, ellenial.org</span></div><div class="rc-amt"><b>{{r_ellenial_value}}</b><span>{{r_first_year}}</span></div></li>
+        <li class="rc-item"><div><span class="rc-what">{{r_gfcom_label}}</span><span class="rc-why">gillefeeling.com</span></div><div class="rc-amt"><b>{{r_gfcom_value}}</b><span>{{r_first_year}}</span></div></li>
+        <li class="rc-item"><div><span class="rc-what">{{r_gfse_label}}</span><span class="rc-why">gillefeeling.se</span></div><div class="rc-amt"><b>{{r_gfse_value}}</b><span>{{r_first_year}}</span></div></li>
+        <li class="rc-item"><div><span class="rc-what">{{r_hosting_label}}</span><span class="rc-why">{{r_hosting_note}}</span></div><div class="rc-amt"><b>{{r_hosting_value}}</b></div></li>
+        <li class="rc-item rc-in"><div><span class="rc-what">{{r_donations_label}}</span></div><div class="rc-amt"><b>{{r_donations_value}}</b></div></li>
+      </ul>
+      <h3 class="rc-group">{{coming_launch}}</h3>
+      <ul class="rc-list">
+        <li class="rc-item"><div><span class="rc-what">{{r_vercel_label}}</span><span class="rc-why">{{r_vercel_note}}</span></div><div class="rc-amt"><b>{{r_vercel_value}}</b><span>{{r_a_month}}</span></div></li>
+        <li class="rc-item"><div><span class="rc-what">{{r_supabase_label}}</span><span class="rc-why">{{r_supabase_note}}</span></div><div class="rc-amt"><b>{{r_supabase_value}}</b><span>{{r_a_month}}</span></div></li>
+        <li class="rc-item"><div><span class="rc-what">{{r_apple_label}}</span><span class="rc-why">{{r_stores_note}}</span></div><div class="rc-amt"><b>{{r_apple_value}}</b><span>{{r_a_year}}</span></div></li>
+        <li class="rc-item"><div><span class="rc-what">{{r_google_label}}</span><span class="rc-why">{{r_stores_note}}</span></div><div class="rc-amt"><b>{{r_google_value}}</b><span>{{r_once}}</span></div></li>
+      </ul>
+      <p class="rc-foot">{{receipt_updated}}</p>
     </div>
   </div>
 </section>

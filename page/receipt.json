@@ -1,13 +1,14 @@
 {
-  "_note": "The receipt's numbers, shared by every language. Update here once a month; the strings files say {name} where each one goes.",
+  "_note": "The receipt's numbers, shared by every language. Update here once a month; the strings files say {name} where each one goes. All amounts include 25% Swedish VAT (moms), because I pay it.",
   "updated": "2026-11-04",
-  "ellenial_domains": "$19.98",
-  "gillefeeling_domains": "$11.25 + 25 SEK",
-  "hosting_now": "$0",
-  "vercel_pro": "$20",
-  "supabase_pro": "$25",
-  "apple": "$99",
-  "google": "$25",
   "claude_pro": "249 SEK",
-  "claude_max": "1495 SEK"
+  "claude_max": "1495 SEK",
+  "ellenial_domains": "$24.98",
+  "gillefeeling_com": "$14.06",
+  "gillefeeling_se": "31 SEK",
+  "hosting_now": "$0",
+  "vercel_pro": "$25",
+  "supabase_pro": "$31.25",
+  "apple": "$123.75",
+  "google": "$31.25"
 }
