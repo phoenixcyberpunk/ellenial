@@ -67,14 +67,15 @@
   "footer_made": "Made by Ellen",
   "footer_code": "Code on GitHub",
   "chip_early": "Early alpha",
-  "weather_desc": "Six weather forecasts for Gothenburg, combined into one. Coming: historical weather data.",
+  "weather_desc": "Combination of weather services in Gothenburg, including historical data, frost, UV and sunny days.",
   "maps_desc": "Maps for unwinding: green spaces and social places, with a dog mode you can switch on and off.",
-  "lunch_desc": "Every lunch menu around Lindholmen. Soon: voting in secure links.",
-  "party_desc": "Party games for the whole family, usable offline.",
+  "lunch_desc": "Shows Lindholmen lunch places and adjoining areas. With a simple planning tool for bringing colleagues and friends.",
+  "party_desc": "Party games for the whole family, where several are usable offline.",
   "quiz_desc": "Quizzes to play together, on one shared screen or on your own phones. Make your own.",
   "theme_label": "Theme",
   "theme_auto": "Auto",
   "theme_light": "Light",
   "theme_dark": "Dark",
-  "theme_auto_hint": "Follows your phone"
+  "theme_auto_hint": "Follows your phone",
+  "poll_desc": "Easy polling tool for simple polling purposes."
 }
