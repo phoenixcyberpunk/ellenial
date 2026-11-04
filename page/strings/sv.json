@@ -12,7 +12,7 @@
   "hero_browse": "Portfolio",
   "hero_costs": "Se vad det kostar att driva",
   "lib_title": "Portfolio",
-  "lib_lead": "Ellenial portfolio är under uppbyggnad. Se här för senaste uppdateringarna.<br>Gillefeeling är i alpha. Flera andra appar är i early alpha.",
+  "lib_lead": "Ellenial portfolio är under uppbyggnad. Se här för senaste uppdateringarna.<br>Gillefeeling och Quiz är i alfa. Flera andra appar är i early alpha.",
   "gf_status": "I alfa med vänner",
   "gf_desc": "Planera häng med familj och vänner, antingen med en färdig idé eller börja med att hitta ett datum som fungerar för alla.",
   "split_title": "Dela kostnader",
@@ -77,5 +77,6 @@
   "theme_light": "Ljust",
   "theme_dark": "Mörkt",
   "theme_auto_hint": "Följer telefonen",
-  "poll_desc": "Ett enkelt verktyg för snabba omröstningar."
+  "poll_desc": "Ett enkelt verktyg för snabba omröstningar.",
+  "chip_alpha": "Alfa"
 }
