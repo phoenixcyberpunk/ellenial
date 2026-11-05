@@ -1,0 +1,142 @@
+{
+ "by": "Ellen Nilsson (Ellenial), drawn in Procreate",
+ "licence": "not decided yet — ask Ellen before using outside Ellenial",
+ "drawings": [
+  {
+   "name": "sun",
+   "file": "https://ellenial.app/drawings/sun.png",
+   "shows": "Sunny",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "clear",
+   "file": "https://ellenial.app/drawings/clear.png",
+   "shows": "Clear night (moon)",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "mix-day",
+   "file": "https://ellenial.app/drawings/mix-day.png",
+   "shows": "Partly cloudy, day",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "mix-night",
+   "file": "https://ellenial.app/drawings/mix-night.png",
+   "shows": "Partly cloudy, night",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "cloudy",
+   "file": "https://ellenial.app/drawings/cloudy.png",
+   "shows": "Cloudy",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "drizzle",
+   "file": "https://ellenial.app/drawings/drizzle.png",
+   "shows": "Drizzle",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "rain",
+   "file": "https://ellenial.app/drawings/rain.png",
+   "shows": "Rain",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "sleet",
+   "file": "https://ellenial.app/drawings/sleet.png",
+   "shows": "Sleet (snöblandat regn)",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "snow",
+   "file": "https://ellenial.app/drawings/snow.png",
+   "shows": "Snow",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "thunder",
+   "file": "https://ellenial.app/drawings/thunder.png",
+   "shows": "Thunder",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "wind",
+   "file": "https://ellenial.app/drawings/wind.png",
+   "shows": "Windy",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "breeze",
+   "file": "https://ellenial.app/drawings/breeze.png",
+   "shows": "Breezy (small badge in the corner of sun or cloud)",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "fog",
+   "file": "https://ellenial.app/drawings/fog.png",
+   "shows": "Fog (overlay across the lower part of sun, moon or cloud; not square)",
+   "usedIn": "weather",
+   "width": 512,
+   "height": 230
+  },
+  {
+   "name": "frost",
+   "file": "https://ellenial.app/drawings/frost.png",
+   "shows": "Frost",
+   "usedIn": "weather: What usually happens",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "uv",
+   "file": "https://ellenial.app/drawings/uv.png",
+   "shows": "UV (sun in sunglasses)",
+   "usedIn": "weather: What usually happens",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "change",
+   "file": "https://ellenial.app/drawings/change.png",
+   "shows": "How it's changing (thermometer)",
+   "usedIn": "weather: What usually happens",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "oops",
+   "file": "https://ellenial.app/drawings/oops.png",
+   "shows": "Something couldn't be reached (puzzled cloud)",
+   "usedIn": "any app: error state",
+   "width": 512,
+   "height": 512
+  }
+ ]
+}

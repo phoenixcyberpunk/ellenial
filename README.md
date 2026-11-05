@@ -23,6 +23,10 @@ Made by Ellen, one person, with AI helping on the code.
 
 Build locally: `npm install && npm run build`, then open `dist/index.html`.
 
+## Drawings
+
+Ellen's hand-drawn icons (Procreate) live in one place for every Ellenial app: **ellenial.app/drawings** shows them all, `drawings.json` lists them for apps, and each is a 512 px PNG at `ellenial.app/drawings/<name>.png`. Originals (1024 px) and the build script are in `art/drawings`; run `python3 art/drawings/build.py` after adding or changing one. Other Ellenial sites can load them directly (they're served with `Cross-Origin-Resource-Policy: cross-origin`), or copy them in. Licence for the drawings: not decided yet.
+
 ## Credits
 
 `credits.json` lists every free and open project the Ellenial apps build on: licence, the exact credit line, which apps use it and how to support it. It will feed ellenial.app/thanks and each app's credit lines. Paid services (Vercel, Supabase, Claude) are on the receipt instead.
