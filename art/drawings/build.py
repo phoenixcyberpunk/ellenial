@@ -97,8 +97,8 @@ with open(os.path.join(OUT, "drawings.json"), "w") as f:
 # A gallery page at ellenial.app/drawings: every drawing on light and dark, with its name and use.
 import html
 cards = "\n".join(
-    f'<figure><div class="pair"><span class="light"><img src="{d["name"]}.png" alt="" width="{d["width"]//4}" height="{d["height"]//4}"></span>'
-    f'<span class="dark"><img src="{d["name"]}-dark.png" alt="" width="{d["width"]//4}" height="{d["height"]//4}"></span></div>'
+    f'<figure><div class="pair"><span class="light"><img src="/drawings/{d["name"]}.png" alt="" width="{d["width"]//4}" height="{d["height"]//4}"></span>'
+    f'<span class="dark"><img src="/drawings/{d["name"]}-dark.png" alt="" width="{d["width"]//4}" height="{d["height"]//4}"></span></div>'
     f'<figcaption><b>{html.escape(d["name"])}</b><span>{html.escape(d["shows"])}</span><span class="used">{html.escape(d["usedIn"])}</span></figcaption></figure>'
     for d in listing)
 page = f"""<!doctype html>
