@@ -65,7 +65,7 @@ for name, title, used in DRAWINGS:
     print(name, out.size, os.path.getsize(os.path.join(OUT, name + ".png")), "bytes")
 
 with open(os.path.join(OUT, "drawings.json"), "w") as f:
-    json.dump({"by": "Ellen Nilsson (Ellenial), drawn in Procreate", "licence": "not decided yet — ask Ellen before using outside Ellenial",
+    json.dump({"by": "Ellen Nilsson (Ellenial), drawn in Procreate", "licence": "CC BY-NC-SA 4.0 — credit Ellen Nilsson / Ellenial, no commercial use, share remixes alike (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
                "drawings": listing}, f, ensure_ascii=False, indent=1)
 
 # A gallery page at ellenial.app/drawings: every drawing on light and dark, with its name and use.
@@ -103,7 +103,7 @@ figcaption .used {{ font-size:12px; }}
 </style></head>
 <body><main>
 <h1>Drawings</h1>
-<p>Hand-drawn by Ellen in Procreate for the Ellenial apps. Each is a 512 px PNG at <code>ellenial.app/drawings/&lt;name&gt;.png</code>; the full list for apps is <a href="drawings.json">drawings.json</a>.</p>
+<p>Hand-drawn by Ellen in Procreate for the Ellenial apps. Each is a 512 px PNG at <code>ellenial.app/drawings/&lt;name&gt;.png</code>; the full list for apps is <a href="drawings.json">drawings.json</a>. Licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> (credit Ellenial, not for sale, remixes shared alike). The code around them is AGPL-3.0.</p>
 <div class="grid">
 {cards}
 </div>

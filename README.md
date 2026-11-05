@@ -25,7 +25,7 @@ Build locally: `npm install && npm run build`, then open `dist/index.html`.
 
 ## Drawings
 
-Ellen's hand-drawn icons (Procreate) live in one place for every Ellenial app: **ellenial.app/drawings** shows them all, `drawings.json` lists them for apps, and each is a 512 px PNG at `ellenial.app/drawings/<name>.png`. Originals (1024 px) and the build script are in `art/drawings`; run `python3 art/drawings/build.py` after adding or changing one. Other Ellenial sites can load them directly (they're served with `Cross-Origin-Resource-Policy: cross-origin`), or copy them in. Licence for the drawings: not decided yet.
+Ellen's hand-drawn icons (Procreate) live in one place for every Ellenial app: **ellenial.app/drawings** shows them all, `drawings.json` lists them for apps, and each is a 512 px PNG at `ellenial.app/drawings/<name>.png`. Originals (1024 px) and the build script are in `art/drawings`; run `python3 art/drawings/build.py` after adding or changing one. Other Ellenial sites can load them directly (they're served with `Cross-Origin-Resource-Policy: cross-origin`), or copy them in. The drawings are licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (credit Ellen Nilsson / Ellenial, no commercial use, remixes under the same licence), separately from the AGPL-3.0 code.
 
 ## Credits
 
