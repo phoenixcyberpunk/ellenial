@@ -5,7 +5,8 @@
     "required": "true when the licence asks for a visible credit where the content is shown",
     "credit": "the exact short line to show in the app",
     "support": "where people can give back; null when there's no donation route",
-    "check": "anything still to confirm before publishing"
+    "check": "anything still to confirm before publishing",
+    "licence_sv": "optional Swedish wording when the licence is a sentence rather than a name"
   },
   "credits": [
     {
@@ -29,6 +30,7 @@
       "url": "https://download.geofabrik.de",
       "type": "data",
       "licence": "Free download of OpenStreetMap data (ODbL)",
+      "licence_sv": "Fri nedladdning av OpenStreetMap-data (ODbL)",
       "required": false,
       "credit": "OpenStreetMap extract by Geofabrik",
       "apps": [
@@ -43,6 +45,7 @@
       "url": "https://openfreemap.org",
       "type": "map",
       "licence": "Free map tiles, built on OpenMapTiles",
+      "licence_sv": "Fria kartrutor, byggda på OpenMapTiles",
       "required": true,
       "credit": "Map tiles: OpenFreeMap, OpenMapTiles",
       "apps": [
@@ -57,6 +60,7 @@
       "url": "https://commons.wikimedia.org",
       "type": "photos",
       "licence": "Per photo (CC BY, CC BY-SA, CC0)",
+      "licence_sv": "Per foto (CC BY, CC BY-SA, CC0)",
       "required": true,
       "credit": "Photo: {author}, {licence}, via Wikimedia Commons",
       "apps": [
@@ -114,6 +118,7 @@
       "url": "https://open-meteo.com",
       "type": "data",
       "licence": "CC BY 4.0 (data); free API is for non-commercial use",
+      "licence_sv": "CC BY 4.0 (data); fria API:t är för icke-kommersiellt bruk",
       "required": true,
       "credit": "Weather models via Open-Meteo (ECMWF, DWD ICON, DMI, NOAA GFS), CC BY 4.0",
       "apps": [
@@ -128,6 +133,7 @@
       "url": "https://www.goteborg.com/guider/hundvanliga-goteborg",
       "type": "facts",
       "licence": "Facts, rewritten by hand",
+      "licence_sv": "Fakta, omskrivna för hand",
       "required": false,
       "credit": "Dog rules: Göteborg & Co",
       "apps": [

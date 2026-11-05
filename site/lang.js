@@ -1,7 +1,7 @@
 // Chooses English or Swedish. Everything happens on the visitor's phone: nothing is sent, logged or looked up.
 // - A choice made with the EN | SV switch wins, and is remembered on this phone only (localStorage).
 // - Otherwise the phone's own language setting decides: Swedish phones get /sv, everyone else English.
-// - Only the English start page ever redirects. A link to /sv always opens in Swedish, so it can be shared.
+// - Only English pages ever redirect, each to its Swedish twin (/ → /sv, /thanks → /sv/thanks). A link to /sv always opens in Swedish, so it can be shared.
 // Loaded in <head> without defer, so the switch happens before the page is drawn (no flash).
 (function () {
   var KEY = 'ellenial-lang';
@@ -36,7 +36,7 @@
       remember('en');
       try { history.replaceState(null, '', location.pathname + location.hash); } catch (e) {}
     } else if ((remembered() || phoneLanguage()) === 'sv') {
-      location.replace('/sv' + location.hash);
+      location.replace('/sv' + (location.pathname === '/' ? '' : location.pathname) + location.hash);
     }
   }
 
