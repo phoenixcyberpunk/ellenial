@@ -3,9 +3,9 @@ served at https://ellenial.app/drawings/ for every Ellenial app.
 
 Each drawing is re-centred in the same 840 px window (so the sizes Ellen drew stay relative to each
 other) and saved at 512 px, big enough for any use; browsers scale it down crisply.
-Dark mode (5 Nov 2026, decided with Ellen): every drawing also gets a <name>-dark.png where only the outline
-(#17141F, the dark page colour) is repainted in a soft mid-tone #8F87A3 (night was too loud). Fills stay exactly as
-drawn, lines are never reshaped. Apps pick <name>.png or <name>-dark.png by theme.
+Dark mode (decided 5 Nov 2026): the drawing as drawn, in every theme. The #17141F outline melts into the
+dark page and the fills carry the shape, which Ellen likes best (Weather has looked like that all along).
+Light-outline copies were tried and dropped the same evening; no <name>-dark.png exists.
 Three are adjusted in code, decided with Ellen on 5 Nov 2026:
 - wind: strokes thickened (13 px at 1024) so they hold at 24 px
 - fog: an overlay, not a square icon; the gap between the two strokes halved
@@ -13,47 +13,7 @@ Three are adjusted in code, decided with Ellen on 5 Nov 2026:
 Run from the repo root:  python3 art/drawings/build.py
 """
 import json, os
-import numpy as np
 from PIL import Image, ImageFilter
-
-OUTLINE, OUTLINE_DARK = (0x17, 0x14, 0x1F), (0x8F, 0x87, 0xA3)  # dark outline: softer mid-tone, Ellen's pick 5 Nov
-
-def dark_outline(im):
-    """Repaint pixels that are the outline colour (and the anti-aliased edge around it) in the dark
-    outline colour. Everything else, including fills, is left untouched."""
-    a = np.asarray(im.convert("RGBA")).astype(np.float32)
-    rgb = a[..., :3]
-    dist = np.sqrt(((rgb - np.array(OUTLINE, dtype=np.float32)) ** 2).sum(-1))
-    t = np.clip((100.0 - dist) / 60.0, 0.0, 1.0)[..., None]  # 1 = outline, 0 = fill
-    rgb[:] = rgb * (1 - t) + np.array(OUTLINE_DARK, dtype=np.float32) * t
-    return Image.fromarray(a.clip(0, 255).astype(np.uint8), "RGBA")
-
-SRC = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(SRC, "..", "..", "site", "drawings")
-SIZE, WINDOW = 512, 840
-
-# name, what it shows, where it's used — the list apps and the gallery read
-DRAWINGS = [
-  ("sun", "Sunny", "weather"), ("clear", "Clear night (moon)", "weather"),
-  ("mix-day", "Partly cloudy, day", "weather"), ("mix-night", "Partly cloudy, night", "weather"),
-  ("cloudy", "Cloudy", "weather"), ("drizzle", "Drizzle", "weather"), ("rain", "Rain", "weather"),
-  ("sleet", "Sleet (snöblandat regn)", "weather"), ("snow", "Snow", "weather"),
-  ("thunder", "Thunder", "weather"), ("wind", "Windy", "weather"),
-  ("breeze", "Breezy (small badge in the corner of sun or cloud)", "weather"),
-  ("fog", "Fog (overlay across the lower part of sun, moon or cloud; not square)", "weather"),
-  ("frost", "Frost", "weather: What usually happens"), ("uv", "UV (sun in sunglasses)", "weather: What usually happens"),
-  ("change", "How it's changing (thermometer)", "weather: What usually happens"),
-  ("oops", "Something couldn't be reached (puzzled cloud)", "any app: error state"),
-  # ellenial maps (5 Nov 2026): one per kind of place, plus facilities and the dog switch
-  ("tree", "Park", "maps: urban"), ("leaf", "Nature reserve", "maps: nature"),
-  ("waves", "Swimming spot", "maps: water"), ("fountain", "Square", "maps: squares"),
-  ("flower", "Garden", "maps: gardens"), ("mountain", "A view (three peaks, sun behind)", "maps: view"),
-  ("book", "Library", "maps: libraries"), ("wc", "Toilet", "maps: facility pin"),
-  ("tap", "Water tap", "maps: facility pin"), ("paw-run", "Dog run (paw in a frame)", "maps: facility pin"),
-  ("umbrella", "Shelter from rain", "maps: nearby tag"), ("pin", "Map pin (towns and areas in search)", "maps: search"),
-  ("paw", "Bringing a dog? (light mode)", "maps: dog switch"), ("paw-halo", "Bringing a dog? (dark mode, cream halo)", "maps: dog switch"),
-]
-THICKEN = {"wind": (13, (0x7F, 0xA9, 0x8E))}
 
 def square(im):
     x0, y0, x1, y1 = im.getchannel("A").getbbox()
@@ -84,9 +44,7 @@ for name, title, used in DRAWINGS:
         im = Image.new("RGBA", im.size, rgb + (0,)); im.putalpha(a)
     out = fog_overlay(im) if name == "fog" else square(im)
     out.save(os.path.join(OUT, name + ".png"), optimize=True)
-    dark_outline(out).save(os.path.join(OUT, name + "-dark.png"), optimize=True)
-    listing.append({"name": name, "file": f"https://ellenial.app/drawings/{name}.png",
-                    "dark": f"https://ellenial.app/drawings/{name}-dark.png", "shows": title,
+    listing.append({"name": name, "file": f"https://ellenial.app/drawings/{name}.png", "shows": title,
                     "usedIn": used, "width": out.size[0], "height": out.size[1]})
     print(name, out.size, os.path.getsize(os.path.join(OUT, name + ".png")), "bytes")
 
@@ -98,7 +56,7 @@ with open(os.path.join(OUT, "drawings.json"), "w") as f:
 import html
 cards = "\n".join(
     f'<figure><div class="pair"><span class="light"><img src="/drawings/{d["name"]}.png" alt="" width="{d["width"]//4}" height="{d["height"]//4}"></span>'
-    f'<span class="dark"><img src="/drawings/{d["name"]}-dark.png" alt="" width="{d["width"]//4}" height="{d["height"]//4}"></span></div>'
+    f'<span class="dark"><img src="/drawings/{d["name"]}.png" alt="" width="{d["width"]//4}" height="{d["height"]//4}"></span></div>'
     f'<figcaption><b>{html.escape(d["name"])}</b><span>{html.escape(d["shows"])}</span><span class="used">{html.escape(d["usedIn"])}</span></figcaption></figure>'
     for d in listing)
 page = f"""<!doctype html>
@@ -129,7 +87,7 @@ figcaption .used {{ font-size:12px; }}
 </style></head>
 <body><main>
 <h1>Drawings</h1>
-<p>Hand-drawn by Ellen in Procreate for the Ellenial apps. Each is a 512 px PNG at <code>ellenial.app/drawings/&lt;name&gt;.png</code>, with a dark-mode copy (light outline, same drawing) at <code>&lt;name&gt;-dark.png</code>; the full list for apps is <a href="drawings.json">drawings.json</a>. Licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> (credit Ellenial, not for sale, remixes shared alike). The code around them is AGPL-3.0.</p>
+<p>Hand-drawn by Ellen in Procreate for the Ellenial apps. Each is a 512 px PNG at <code>ellenial.app/drawings/&lt;name&gt;.png</code>, used as is in light and dark mode; the full list for apps is <a href="drawings.json">drawings.json</a>. Licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> (credit Ellenial, not for sale, remixes shared alike). The code around them is AGPL-3.0.</p>
 <div class="grid">
 {cards}
 </div>
