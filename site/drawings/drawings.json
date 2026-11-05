@@ -5,6 +5,7 @@
   {
    "name": "sun",
    "file": "https://ellenial.app/drawings/sun.png",
+   "dark": "https://ellenial.app/drawings/sun-dark.png",
    "shows": "Sunny",
    "usedIn": "weather",
    "width": 512,
@@ -13,6 +14,7 @@
   {
    "name": "clear",
    "file": "https://ellenial.app/drawings/clear.png",
+   "dark": "https://ellenial.app/drawings/clear-dark.png",
    "shows": "Clear night (moon)",
    "usedIn": "weather",
    "width": 512,
@@ -21,6 +23,7 @@
   {
    "name": "mix-day",
    "file": "https://ellenial.app/drawings/mix-day.png",
+   "dark": "https://ellenial.app/drawings/mix-day-dark.png",
    "shows": "Partly cloudy, day",
    "usedIn": "weather",
    "width": 512,
@@ -29,6 +32,7 @@
   {
    "name": "mix-night",
    "file": "https://ellenial.app/drawings/mix-night.png",
+   "dark": "https://ellenial.app/drawings/mix-night-dark.png",
    "shows": "Partly cloudy, night",
    "usedIn": "weather",
    "width": 512,
@@ -37,6 +41,7 @@
   {
    "name": "cloudy",
    "file": "https://ellenial.app/drawings/cloudy.png",
+   "dark": "https://ellenial.app/drawings/cloudy-dark.png",
    "shows": "Cloudy",
    "usedIn": "weather",
    "width": 512,
@@ -45,6 +50,7 @@
   {
    "name": "drizzle",
    "file": "https://ellenial.app/drawings/drizzle.png",
+   "dark": "https://ellenial.app/drawings/drizzle-dark.png",
    "shows": "Drizzle",
    "usedIn": "weather",
    "width": 512,
@@ -53,6 +59,7 @@
   {
    "name": "rain",
    "file": "https://ellenial.app/drawings/rain.png",
+   "dark": "https://ellenial.app/drawings/rain-dark.png",
    "shows": "Rain",
    "usedIn": "weather",
    "width": 512,
@@ -61,6 +68,7 @@
   {
    "name": "sleet",
    "file": "https://ellenial.app/drawings/sleet.png",
+   "dark": "https://ellenial.app/drawings/sleet-dark.png",
    "shows": "Sleet (snöblandat regn)",
    "usedIn": "weather",
    "width": 512,
@@ -69,6 +77,7 @@
   {
    "name": "snow",
    "file": "https://ellenial.app/drawings/snow.png",
+   "dark": "https://ellenial.app/drawings/snow-dark.png",
    "shows": "Snow",
    "usedIn": "weather",
    "width": 512,
@@ -77,6 +86,7 @@
   {
    "name": "thunder",
    "file": "https://ellenial.app/drawings/thunder.png",
+   "dark": "https://ellenial.app/drawings/thunder-dark.png",
    "shows": "Thunder",
    "usedIn": "weather",
    "width": 512,
@@ -85,6 +95,7 @@
   {
    "name": "wind",
    "file": "https://ellenial.app/drawings/wind.png",
+   "dark": "https://ellenial.app/drawings/wind-dark.png",
    "shows": "Windy",
    "usedIn": "weather",
    "width": 512,
@@ -93,6 +104,7 @@
   {
    "name": "breeze",
    "file": "https://ellenial.app/drawings/breeze.png",
+   "dark": "https://ellenial.app/drawings/breeze-dark.png",
    "shows": "Breezy (small badge in the corner of sun or cloud)",
    "usedIn": "weather",
    "width": 512,
@@ -101,6 +113,7 @@
   {
    "name": "fog",
    "file": "https://ellenial.app/drawings/fog.png",
+   "dark": "https://ellenial.app/drawings/fog-dark.png",
    "shows": "Fog (overlay across the lower part of sun, moon or cloud; not square)",
    "usedIn": "weather",
    "width": 512,
@@ -109,6 +122,7 @@
   {
    "name": "frost",
    "file": "https://ellenial.app/drawings/frost.png",
+   "dark": "https://ellenial.app/drawings/frost-dark.png",
    "shows": "Frost",
    "usedIn": "weather: What usually happens",
    "width": 512,
@@ -117,6 +131,7 @@
   {
    "name": "uv",
    "file": "https://ellenial.app/drawings/uv.png",
+   "dark": "https://ellenial.app/drawings/uv-dark.png",
    "shows": "UV (sun in sunglasses)",
    "usedIn": "weather: What usually happens",
    "width": 512,
@@ -125,6 +140,7 @@
   {
    "name": "change",
    "file": "https://ellenial.app/drawings/change.png",
+   "dark": "https://ellenial.app/drawings/change-dark.png",
    "shows": "How it's changing (thermometer)",
    "usedIn": "weather: What usually happens",
    "width": 512,
@@ -133,6 +149,7 @@
   {
    "name": "oops",
    "file": "https://ellenial.app/drawings/oops.png",
+   "dark": "https://ellenial.app/drawings/oops-dark.png",
    "shows": "Something couldn't be reached (puzzled cloud)",
    "usedIn": "any app: error state",
    "width": 512,
@@ -141,6 +158,7 @@
   {
    "name": "tree",
    "file": "https://ellenial.app/drawings/tree.png",
+   "dark": "https://ellenial.app/drawings/tree-dark.png",
    "shows": "Park",
    "usedIn": "maps: urban",
    "width": 512,
@@ -149,6 +167,7 @@
   {
    "name": "leaf",
    "file": "https://ellenial.app/drawings/leaf.png",
+   "dark": "https://ellenial.app/drawings/leaf-dark.png",
    "shows": "Nature reserve",
    "usedIn": "maps: nature",
    "width": 512,
@@ -157,6 +176,7 @@
   {
    "name": "waves",
    "file": "https://ellenial.app/drawings/waves.png",
+   "dark": "https://ellenial.app/drawings/waves-dark.png",
    "shows": "Swimming spot",
    "usedIn": "maps: water",
    "width": 512,
@@ -165,6 +185,7 @@
   {
    "name": "fountain",
    "file": "https://ellenial.app/drawings/fountain.png",
+   "dark": "https://ellenial.app/drawings/fountain-dark.png",
    "shows": "Square",
    "usedIn": "maps: squares",
    "width": 512,
@@ -173,6 +194,7 @@
   {
    "name": "flower",
    "file": "https://ellenial.app/drawings/flower.png",
+   "dark": "https://ellenial.app/drawings/flower-dark.png",
    "shows": "Garden",
    "usedIn": "maps: gardens",
    "width": 512,
@@ -181,6 +203,7 @@
   {
    "name": "mountain",
    "file": "https://ellenial.app/drawings/mountain.png",
+   "dark": "https://ellenial.app/drawings/mountain-dark.png",
    "shows": "A view (three peaks, sun behind)",
    "usedIn": "maps: view",
    "width": 512,
@@ -189,6 +212,7 @@
   {
    "name": "book",
    "file": "https://ellenial.app/drawings/book.png",
+   "dark": "https://ellenial.app/drawings/book-dark.png",
    "shows": "Library",
    "usedIn": "maps: libraries",
    "width": 512,
@@ -197,6 +221,7 @@
   {
    "name": "wc",
    "file": "https://ellenial.app/drawings/wc.png",
+   "dark": "https://ellenial.app/drawings/wc-dark.png",
    "shows": "Toilet",
    "usedIn": "maps: facility pin",
    "width": 512,
@@ -205,6 +230,7 @@
   {
    "name": "tap",
    "file": "https://ellenial.app/drawings/tap.png",
+   "dark": "https://ellenial.app/drawings/tap-dark.png",
    "shows": "Water tap",
    "usedIn": "maps: facility pin",
    "width": 512,
@@ -213,6 +239,7 @@
   {
    "name": "paw-run",
    "file": "https://ellenial.app/drawings/paw-run.png",
+   "dark": "https://ellenial.app/drawings/paw-run-dark.png",
    "shows": "Dog run (paw in a frame)",
    "usedIn": "maps: facility pin",
    "width": 512,
@@ -221,6 +248,7 @@
   {
    "name": "umbrella",
    "file": "https://ellenial.app/drawings/umbrella.png",
+   "dark": "https://ellenial.app/drawings/umbrella-dark.png",
    "shows": "Shelter from rain",
    "usedIn": "maps: nearby tag",
    "width": 512,
@@ -229,6 +257,7 @@
   {
    "name": "pin",
    "file": "https://ellenial.app/drawings/pin.png",
+   "dark": "https://ellenial.app/drawings/pin-dark.png",
    "shows": "Map pin (towns and areas in search)",
    "usedIn": "maps: search",
    "width": 512,
@@ -237,6 +266,7 @@
   {
    "name": "paw",
    "file": "https://ellenial.app/drawings/paw.png",
+   "dark": "https://ellenial.app/drawings/paw-dark.png",
    "shows": "Bringing a dog? (light mode)",
    "usedIn": "maps: dog switch",
    "width": 512,
@@ -245,6 +275,7 @@
   {
    "name": "paw-halo",
    "file": "https://ellenial.app/drawings/paw-halo.png",
+   "dark": "https://ellenial.app/drawings/paw-halo-dark.png",
    "shows": "Bringing a dog? (dark mode, cream halo)",
    "usedIn": "maps: dog switch",
    "width": 512,
