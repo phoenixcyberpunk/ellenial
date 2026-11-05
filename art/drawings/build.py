@@ -4,7 +4,7 @@ served at https://ellenial.app/drawings/ for every Ellenial app.
 Each drawing is re-centred in the same 840 px window (so the sizes Ellen drew stay relative to each
 other) and saved at 512 px, big enough for any use; browsers scale it down crisply.
 Dark mode (5 Nov 2026, decided with Ellen): every drawing also gets a <name>-dark.png where only the outline
-(#17141F, the dark page colour) is repainted in the night token's dark value #F3EEF8. Fills stay exactly as
+(#17141F, the dark page colour) is repainted in a soft mid-tone #8F87A3 (night was too loud). Fills stay exactly as
 drawn, lines are never reshaped. Apps pick <name>.png or <name>-dark.png by theme.
 Three are adjusted in code, decided with Ellen on 5 Nov 2026:
 - wind: strokes thickened (13 px at 1024) so they hold at 24 px
@@ -16,7 +16,7 @@ import json, os
 import numpy as np
 from PIL import Image, ImageFilter
 
-OUTLINE, OUTLINE_DARK = (0x17, 0x14, 0x1F), (0xF3, 0xEE, 0xF8)
+OUTLINE, OUTLINE_DARK = (0x17, 0x14, 0x1F), (0x8F, 0x87, 0xA3)  # dark outline: softer mid-tone, Ellen's pick 5 Nov
 
 def dark_outline(im):
     """Repaint pixels that are the outline colour (and the anti-aliased edge around it) in the dark
