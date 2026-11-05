@@ -260,8 +260,8 @@
   "libraries": "Each app's other open-source libraries (React, supabase-js, Vite and so on) come from a generated list per app: 'Built with N open-source libraries'.",
   "left_out": {
     "Panoramax, Open Prices, Open Food Facts": "On the 29 Oct idea list but no app uses them yet; add when one does.",
-    "lindholmenlunch.nu": "Not used. Luncheon reads each restaurant's own website.",
-    "Restaurants' own websites": "Luncheon links each menu back to its source; not part of /thanks.",
+    "lindholmenlunch.nu": "Not used. Lunch reads each restaurant's own website.",
+    "Restaurants' own websites": "Lunch links each menu back to its source; not part of /thanks.",
     "Vercel, Supabase, Claude": "Paid services: on the receipt, not here (decided 3 Nov)."
   }
 }
