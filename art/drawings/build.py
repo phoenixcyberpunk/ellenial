@@ -15,6 +15,34 @@ Run from the repo root:  python3 art/drawings/build.py
 import json, os
 from PIL import Image, ImageFilter
 
+SRC = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(SRC, "..", "..", "site", "drawings")
+SIZE, WINDOW = 512, 840
+
+# name, what it shows, where it's used — the list apps and the gallery read
+DRAWINGS = [
+  ("sun", "Sunny", "weather"), ("clear", "Clear night (moon)", "weather"),
+  ("mix-day", "Partly cloudy, day", "weather"), ("mix-night", "Partly cloudy, night", "weather"),
+  ("cloudy", "Cloudy", "weather"), ("drizzle", "Drizzle", "weather"), ("rain", "Rain", "weather"),
+  ("sleet", "Sleet (snöblandat regn)", "weather"), ("snow", "Snow", "weather"),
+  ("thunder", "Thunder", "weather"), ("wind", "Windy", "weather"),
+  ("breeze", "Breezy (small badge in the corner of sun or cloud)", "weather"),
+  ("fog", "Fog (overlay across the lower part of sun, moon or cloud; not square)", "weather"),
+  ("frost", "Frost", "weather: What usually happens"), ("uv", "UV (sun in sunglasses)", "weather: What usually happens"),
+  ("change", "How it's changing (thermometer)", "weather: What usually happens"),
+  ("oops", "Something couldn't be reached (puzzled cloud)", "any app: error state"),
+  # ellenial maps (5 Nov 2026): one per kind of place, plus facilities and the dog switch
+  ("tree", "Park", "maps: urban"), ("leaf", "Nature reserve", "maps: nature"),
+  ("waves", "Swimming spot", "maps: water"), ("fountain", "Square", "maps: squares"),
+  ("flower", "Garden", "maps: gardens"), ("mountain", "A view (three peaks, sun behind)", "maps: view"),
+  ("book", "Library", "maps: libraries"), ("wc", "Toilet", "maps: facility pin"),
+  ("tap", "Water tap", "maps: facility pin"), ("paw-run", "Dog run (paw in a frame)", "maps: facility pin"),
+  ("umbrella", "Shelter from rain", "maps: nearby tag"), ("pin", "Map pin (towns and areas in search)", "maps: search"),
+  ("paw", "Bringing a dog? (light mode)", "maps: dog switch"), ("paw-halo", "Bringing a dog? (dark mode, cream halo)", "maps: dog switch"),
+]
+THICKEN = {"wind": (13, (0x7F, 0xA9, 0x8E))}
+
+
 def square(im):
     x0, y0, x1, y1 = im.getchannel("A").getbbox()
     side = max(WINDOW, int(max(x1 - x0, y1 - y0) * 1.04))
