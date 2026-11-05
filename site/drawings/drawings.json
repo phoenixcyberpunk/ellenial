@@ -137,6 +137,118 @@
    "usedIn": "any app: error state",
    "width": 512,
    "height": 512
+  },
+  {
+   "name": "tree",
+   "file": "https://ellenial.app/drawings/tree.png",
+   "shows": "Park",
+   "usedIn": "maps: urban",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "leaf",
+   "file": "https://ellenial.app/drawings/leaf.png",
+   "shows": "Nature reserve",
+   "usedIn": "maps: nature",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "waves",
+   "file": "https://ellenial.app/drawings/waves.png",
+   "shows": "Swimming spot",
+   "usedIn": "maps: water",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "fountain",
+   "file": "https://ellenial.app/drawings/fountain.png",
+   "shows": "Square",
+   "usedIn": "maps: squares",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "flower",
+   "file": "https://ellenial.app/drawings/flower.png",
+   "shows": "Garden",
+   "usedIn": "maps: gardens",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "mountain",
+   "file": "https://ellenial.app/drawings/mountain.png",
+   "shows": "A view (three peaks, sun behind)",
+   "usedIn": "maps: view",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "book",
+   "file": "https://ellenial.app/drawings/book.png",
+   "shows": "Library",
+   "usedIn": "maps: libraries",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "wc",
+   "file": "https://ellenial.app/drawings/wc.png",
+   "shows": "Toilet",
+   "usedIn": "maps: facility pin",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "tap",
+   "file": "https://ellenial.app/drawings/tap.png",
+   "shows": "Water tap",
+   "usedIn": "maps: facility pin",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "paw-run",
+   "file": "https://ellenial.app/drawings/paw-run.png",
+   "shows": "Dog run (paw in a frame)",
+   "usedIn": "maps: facility pin",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "umbrella",
+   "file": "https://ellenial.app/drawings/umbrella.png",
+   "shows": "Shelter from rain",
+   "usedIn": "maps: nearby tag",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "pin",
+   "file": "https://ellenial.app/drawings/pin.png",
+   "shows": "Map pin (towns and areas in search)",
+   "usedIn": "maps: search",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "paw",
+   "file": "https://ellenial.app/drawings/paw.png",
+   "shows": "Bringing a dog? (light mode)",
+   "usedIn": "maps: dog switch",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "paw-halo",
+   "file": "https://ellenial.app/drawings/paw-halo.png",
+   "shows": "Bringing a dog? (dark mode, cream halo)",
+   "usedIn": "maps: dog switch",
+   "width": 512,
+   "height": 512
   }
  ]
 }

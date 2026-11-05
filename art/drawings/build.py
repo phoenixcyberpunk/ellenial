@@ -3,6 +3,7 @@ served at https://ellenial.app/drawings/ for every Ellenial app.
 
 Each drawing is re-centred in the same 840 px window (so the sizes Ellen drew stay relative to each
 other) and saved at 512 px, big enough for any use; browsers scale it down crisply.
+ellenial maps keeps its own dark-mode copies (cream outlines) in that repo; the originals are here.
 Three are adjusted in code, decided with Ellen on 5 Nov 2026:
 - wind: strokes thickened (13 px at 1024) so they hold at 24 px
 - fog: an overlay, not a square icon; the gap between the two strokes halved
@@ -28,6 +29,14 @@ DRAWINGS = [
   ("frost", "Frost", "weather: What usually happens"), ("uv", "UV (sun in sunglasses)", "weather: What usually happens"),
   ("change", "How it's changing (thermometer)", "weather: What usually happens"),
   ("oops", "Something couldn't be reached (puzzled cloud)", "any app: error state"),
+  # ellenial maps (5 Nov 2026): one per kind of place, plus facilities and the dog switch
+  ("tree", "Park", "maps: urban"), ("leaf", "Nature reserve", "maps: nature"),
+  ("waves", "Swimming spot", "maps: water"), ("fountain", "Square", "maps: squares"),
+  ("flower", "Garden", "maps: gardens"), ("mountain", "A view (three peaks, sun behind)", "maps: view"),
+  ("book", "Library", "maps: libraries"), ("wc", "Toilet", "maps: facility pin"),
+  ("tap", "Water tap", "maps: facility pin"), ("paw-run", "Dog run (paw in a frame)", "maps: facility pin"),
+  ("umbrella", "Shelter from rain", "maps: nearby tag"), ("pin", "Map pin (towns and areas in search)", "maps: search"),
+  ("paw", "Bringing a dog? (light mode)", "maps: dog switch"), ("paw-halo", "Bringing a dog? (dark mode, cream halo)", "maps: dog switch"),
 ]
 THICKEN = {"wind": (13, (0x7F, 0xA9, 0x8E))}
 
