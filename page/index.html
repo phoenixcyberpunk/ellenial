@@ -57,12 +57,24 @@
   </div>
 
   <div class="card-grid">
-    <!-- Order: alpha first (linked), then alpha with friends, then early alpha; within each, the Ongoing board's launch waves. -->
+    <!-- Order: alpha first (linked), by how ready each is (7 Nov 2026), then alpha with friends, then early alpha. -->
     <article class="app linked">
       <img class="tile" src="/icons/lunch.png" alt="" width="72" height="72">
       <span class="early alpha">{{chip_alpha}}</span>
       <h3 class="serif"><a href="https://lunch.ellenial.app">Lunch</a></h3>
       <p class="muted desc">{{lunch_desc}}</p>
+    </article>
+    <article class="app linked">
+      <img class="tile" src="/icons/weather.png" alt="" width="72" height="72">
+      <span class="early alpha">{{chip_alpha}}</span>
+      <h3 class="serif"><a href="https://weather.ellenial.app">Weather</a></h3>
+      <p class="muted desc">{{weather_desc}}</p>
+    </article>
+    <article class="app linked">
+      <img class="tile" src="/icons/maps.png" alt="" width="72" height="72">
+      <span class="early alpha">{{chip_alpha}}</span>
+      <h3 class="serif"><a href="https://maps.ellenial.app">ellenial maps</a></h3>
+      <p class="muted desc">{{maps_desc}}</p>
     </article>
     <article class="app linked">
       <img class="tile" src="/icons/quiz.png" alt="" width="72" height="72">
@@ -71,34 +83,22 @@
       <p class="muted desc">{{quiz_desc}}</p>
     </article>
     <article class="app linked">
-      <img class="tile" src="/icons/weather.png" alt="" width="72" height="72">
+      <img class="tile" src="/icons/party-games.png" alt="" width="72" height="72">
       <span class="early alpha">{{chip_alpha}}</span>
-      <h3 class="serif"><a href="https://weather.ellenial.app">Weather</a></h3>
-      <p class="muted desc">{{weather_desc}}</p>
+      <h3 class="serif"><a href="https://partygames.ellenial.app">Party games</a></h3>
+      <p class="muted desc">{{party_desc}}</p>
+    </article>
+    <article class="app linked">
+      <img class="tile" src="/icons/poll.png" alt="" width="72" height="72">
+      <span class="early alpha">{{chip_alpha}}</span>
+      <h3 class="serif"><a href="https://poll.ellenial.app">Poll</a></h3>
+      <p class="muted desc">{{poll_desc}}</p>
     </article>
     <article class="app">
       <img class="tile" src="/icons/gillefeeling.png" alt="" width="72" height="72">
       <span style="align-self:flex-start; padding:3px 10px; border-radius:999px; background:var(--periwinkle); color:var(--night); font-size:13px; font-weight:600">{{gf_status}}</span>
       <h3 class="serif">Gillefeeling</h3>
       <p class="muted desc">{{gf_desc}}</p>
-    </article>
-    <article class="app">
-      <img class="tile" src="/icons/party-games.png" alt="" width="72" height="72">
-      <span class="early">{{chip_early}}</span>
-      <h3 class="serif">Party games</h3>
-      <p class="muted desc">{{party_desc}}</p>
-    </article>
-    <article class="app">
-      <img class="tile" src="/icons/poll.png" alt="" width="72" height="72">
-      <span class="early">{{chip_early}}</span>
-      <h3 class="serif">Poll</h3>
-      <p class="muted desc">{{poll_desc}}</p>
-    </article>
-    <article class="app">
-      <img class="tile" src="/icons/maps.png" alt="" width="72" height="72">
-      <span class="early">{{chip_early}}</span>
-      <h3 class="serif">ellenial maps</h3>
-      <p class="muted desc">{{maps_desc}}</p>
     </article>
     <article class="app">
       <img class="tile" src="/icons/split.png" alt="" width="72" height="72">
@@ -140,6 +140,7 @@
           <tr class="rc-group"><th colspan="3" scope="rowgroup">{{paid_so_far}}</th></tr>
           <tr><th scope="row">{{r_claude_pro_label}}</th><td class="num">{{r_claude_pro_value}}</td><td>{{r_a_month}}</td></tr>
           <tr><th scope="row">{{r_claude_max_label}}</th><td class="num">{{r_claude_max_value}}</td><td>{{r_once}}</td></tr>
+          <tr><th scope="row">{{r_refund_label}}</th><td class="num">{{r_refund_value}}</td><td>{{r_once}}</td></tr>
           <tr><th scope="row">{{r_ellenial_label}}</th><td class="num">{{r_ellenial_value}}</td><td>{{r_first_year}}</td></tr>
           <tr><th scope="row">{{r_gfcom_label}}</th><td class="num">{{r_gfcom_value}}</td><td>{{r_first_year}}</td></tr>
           <tr><th scope="row">{{r_gfse_label}}</th><td class="num">{{r_gfse_value}}</td><td>{{r_first_year}}</td></tr>
