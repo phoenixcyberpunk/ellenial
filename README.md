@@ -36,3 +36,5 @@ Ellen's hand-drawn icons (Procreate) live in one place for every Ellenial app: *
 ## Licence
 
 AGPL-3.0. See `LICENSE`.
+
+The Ellenial name and logo aren't covered by the code licence, see [TRADEMARK.md](TRADEMARK.md).
