@@ -39,6 +39,8 @@ DRAWINGS = [
   ("tap", "Water tap", "maps: facility pin"), ("paw-run", "Dog run (paw in a frame)", "maps: facility pin"),
   ("umbrella", "Shelter from rain", "maps: nearby tag"), ("pin", "Map pin (towns and areas in search)", "maps: search"),
   ("paw", "Bringing a dog? (light mode)", "maps: dog switch"), ("paw-halo", "Bringing a dog? (dark mode, cream halo)", "maps: dog switch"),
+  # bingo (8 Nov 2026): Ellen's app icon drawing, used in place of the flower on Bingo's tile
+  ("bingo", "Bingo card with a winning line", "bingo: app icon, How it works"),
 ]
 THICKEN = {"wind": (13, (0x7F, 0xA9, 0x8E))}
 

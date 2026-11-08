@@ -62,6 +62,7 @@
   "theme_dark": "Mörkt",
   "theme_auto_hint": "Följer telefonen",
   "poll_desc": "Ett enkelt verktyg för snabba omröstningar.",
+  "bingo_desc": "Skapa ett enkelt bingo snabbt och lätt. Ingen information sparas någonstans. Ladda ned ditt bingo som PDF eller bilder. Vill du spela igen? Ladda upp samma PDF och bingot är åter spelbart.",
   "chip_alpha": "Alpha",
   "r_claude_pro_label": "Claude Pro",
   "r_claude_pro_value": "{claude_pro}",

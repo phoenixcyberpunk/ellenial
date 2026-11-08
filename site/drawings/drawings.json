@@ -249,6 +249,14 @@
    "usedIn": "maps: dog switch",
    "width": 512,
    "height": 512
+  },
+  {
+   "name": "bingo",
+   "file": "https://ellenial.app/drawings/bingo.png",
+   "shows": "Bingo card with a winning line",
+   "usedIn": "bingo: app icon, How it works",
+   "width": 512,
+   "height": 512
   }
  ]
 }

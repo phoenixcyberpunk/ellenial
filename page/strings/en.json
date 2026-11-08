@@ -62,6 +62,7 @@
   "theme_dark": "Dark",
   "theme_auto_hint": "Follows your phone",
   "poll_desc": "Easy polling tool for simple polling purposes.",
+  "bingo_desc": "Create a simple bingo card fast and easy. No information stored anywhere. Download your bingo as a PDF or pictures. Want to play again? Re-upload the PDF and reuse the cards again and again.",
   "chip_alpha": "Alpha",
   "r_claude_pro_label": "Claude Pro",
   "r_claude_pro_value": "{claude_pro}",

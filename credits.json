@@ -218,7 +218,8 @@
         "quiz",
         "poll",
         "split",
-        "gillefeeling"
+        "gillefeeling",
+        "bingo"
       ],
       "support": null,
       "check": null
@@ -240,7 +241,8 @@
         "quiz",
         "poll",
         "split",
-        "gillefeeling"
+        "gillefeeling",
+        "bingo"
       ],
       "support": null,
       "check": "Gillefeeling live still uses Instrument Sans (DM Sans waits on staging)"
@@ -257,7 +259,8 @@
         "site",
         "maps",
         "split",
-        "gillefeeling"
+        "gillefeeling",
+        "bingo"
       ],
       "support": "https://opencollective.com/fontsource",
       "check": null
