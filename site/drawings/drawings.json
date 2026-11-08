@@ -257,6 +257,62 @@
    "usedIn": "bingo: app icon, How it works",
    "width": 512,
    "height": 512
+  },
+  {
+   "name": "pannben",
+   "file": "https://ellenial.app/drawings/pannben.png",
+   "shows": "PANNBEN (laughing smiley with a sheep card on its forehead)",
+   "usedIn": "party games: game card",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "imposter",
+   "file": "https://ellenial.app/drawings/imposter.png",
+   "shows": "Imposter (magnifying glass finds the odd face out)",
+   "usedIn": "party games: game card",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "charades",
+   "file": "https://ellenial.app/drawings/charades.png",
+   "shows": "Charades (three faces: silly, laughing, crying)",
+   "usedIn": "party games: game card",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "same-thing",
+   "file": "https://ellenial.app/drawings/same-thing.png",
+   "shows": "Don't say the same thing (speech bubbles, tick and cross)",
+   "usedIn": "party games: game card",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "lapp-i-hatt",
+   "file": "https://ellenial.app/drawings/lapp-i-hatt.png",
+   "shows": "Lapp i hatt (top hat with a note)",
+   "usedIn": "party games: game card",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "wolf-sheep",
+   "file": "https://ellenial.app/drawings/wolf-sheep.png",
+   "shows": "Wolf in Sheep's Clothing (wolf in wool beside a sheep)",
+   "usedIn": "party games: game card",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "make-your-own",
+   "file": "https://ellenial.app/drawings/make-your-own.png",
+   "shows": "Make your own (hat, ace, dice and the PANNBEN smiley)",
+   "usedIn": "party games: your packs card",
+   "width": 512,
+   "height": 512
   }
  ]
 }

@@ -41,6 +41,14 @@ DRAWINGS = [
   ("paw", "Bringing a dog? (light mode)", "maps: dog switch"), ("paw-halo", "Bringing a dog? (dark mode, cream halo)", "maps: dog switch"),
   # bingo (8 Nov 2026): Ellen's app icon drawing, used in place of the flower on Bingo's tile
   ("bingo", "Bingo card with a winning line", "bingo: app icon, How it works"),
+  # party games (8 Nov 2026): one per game; the Party games app icon stays the dice and ace
+  ("pannben", "PANNBEN (laughing smiley with a sheep card on its forehead)", "party games: game card"),
+  ("imposter", "Imposter (magnifying glass finds the odd face out)", "party games: game card"),
+  ("charades", "Charades (three faces: silly, laughing, crying)", "party games: game card"),
+  ("same-thing", "Don't say the same thing (speech bubbles, tick and cross)", "party games: game card"),
+  ("lapp-i-hatt", "Lapp i hatt (top hat with a note)", "party games: game card"),
+  ("wolf-sheep", "Wolf in Sheep's Clothing (wolf in wool beside a sheep)", "party games: game card"),
+  ("make-your-own", "Make your own (hat, ace, dice and the PANNBEN smiley)", "party games: your packs card"),
 ]
 THICKEN = {"wind": (13, (0x7F, 0xA9, 0x8E))}
 
