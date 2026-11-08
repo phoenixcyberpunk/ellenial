@@ -321,6 +321,70 @@
    "usedIn": "gillefeeling: app icon",
    "width": 512,
    "height": 512
+  },
+  {
+   "name": "luncheon",
+   "file": "https://ellenial.app/drawings/luncheon.png",
+   "shows": "Luncheon (plate with salad and tomatoes, fork and knife)",
+   "usedIn": "luncheon: app icon",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "quiz",
+   "file": "https://ellenial.app/drawings/quiz.png",
+   "shows": "Quiz (a 1 X 2 slip with a green tick)",
+   "usedIn": "quiz: app icon",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "weather",
+   "file": "https://ellenial.app/drawings/weather.png",
+   "shows": "Weather (sun behind a rain cloud)",
+   "usedIn": "weather: app icon",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "party-games",
+   "file": "https://ellenial.app/drawings/party-games.png",
+   "shows": "Party games (two dice and the ace of hearts)",
+   "usedIn": "party games: app icon",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "poll",
+   "file": "https://ellenial.app/drawings/poll.png",
+   "shows": "Poll (bar chart with a little person on each bar)",
+   "usedIn": "poll: app icon",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "maps",
+   "file": "https://ellenial.app/drawings/maps.png",
+   "shows": "ellenial maps (folded map with a red pin)",
+   "usedIn": "maps: app icon",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "split",
+   "file": "https://ellenial.app/drawings/split.png",
+   "shows": "Split (banknote with arrows to three people; dark arrows, for light backgrounds)",
+   "usedIn": "split: app icon",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "split-dark",
+   "file": "https://ellenial.app/drawings/split-dark.png",
+   "shows": "Split (the same with light arrows, for a dark page)",
+   "usedIn": "split: drawing on a dark page",
+   "width": 512,
+   "height": 512
   }
  ]
 }

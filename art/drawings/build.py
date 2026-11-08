@@ -51,6 +51,14 @@ DRAWINGS = [
   ("make-your-own", "Make your own (hat, ace, dice and the PANNBEN smiley)", "party games: your packs card"),
   # app icon drawings (8 Nov 2026): one per app, replacing the flower on the tile icons
   ("gillefeeling", "Gillefeeling (a calendar date saying party, with confetti)", "gillefeeling: app icon"),
+  ("luncheon", "Luncheon (plate with salad and tomatoes, fork and knife)", "luncheon: app icon"),
+  ("quiz", "Quiz (a 1 X 2 slip with a green tick)", "quiz: app icon"),
+  ("weather", "Weather (sun behind a rain cloud)", "weather: app icon"),
+  ("party-games", "Party games (two dice and the ace of hearts)", "party games: app icon"),
+  ("poll", "Poll (bar chart with a little person on each bar)", "poll: app icon"),
+  ("maps", "ellenial maps (folded map with a red pin)", "maps: app icon"),
+  ("split", "Split (banknote with arrows to three people; dark arrows, for light backgrounds)", "split: app icon"),
+  ("split-dark", "Split (the same with light arrows, for a dark page)", "split: drawing on a dark page"),
 ]
 THICKEN = {"wind": (13, (0x7F, 0xA9, 0x8E))}
 
