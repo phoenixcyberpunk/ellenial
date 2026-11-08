@@ -46,7 +46,7 @@ DRAWINGS = [
   ("imposter", "Imposter (magnifying glass finds the odd face out)", "party games: game card"),
   ("charades", "Charades (three faces: silly, laughing, crying)", "party games: game card"),
   ("same-thing", "Don't say the same thing (speech bubbles, tick and cross)", "party games: game card"),
-  ("lapp-i-hatt", "Lapp i hatt (top hat with a note)", "party games: game card"),
+  ("lapp-i-hatt", "Lapp i hatt (top hat with a note, cream edge so it holds on dark)", "party games: game card"),
   ("wolf-sheep", "Wolf in Sheep's Clothing (wolf in wool beside a sheep)", "party games: game card"),
   ("make-your-own", "Make your own (hat, ace, dice and the PANNBEN smiley)", "party games: your packs card"),
 ]
