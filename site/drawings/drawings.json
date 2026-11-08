@@ -313,6 +313,14 @@
    "usedIn": "party games: your packs card",
    "width": 512,
    "height": 512
+  },
+  {
+   "name": "gillefeeling",
+   "file": "https://ellenial.app/drawings/gillefeeling.png",
+   "shows": "Gillefeeling (a calendar date saying party, with confetti)",
+   "usedIn": "gillefeeling: app icon",
+   "width": 512,
+   "height": 512
   }
  ]
 }

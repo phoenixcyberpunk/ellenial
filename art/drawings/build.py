@@ -49,6 +49,8 @@ DRAWINGS = [
   ("lapp-i-hatt", "Lapp i hatt (top hat with a note, cream edge so it holds on dark)", "party games: game card"),
   ("wolf-sheep", "Wolf in Sheep's Clothing (wolf in wool beside a sheep)", "party games: game card"),
   ("make-your-own", "Make your own (hat, ace, dice and the PANNBEN smiley)", "party games: your packs card"),
+  # app icon drawings (8 Nov 2026): one per app, replacing the flower on the tile icons
+  ("gillefeeling", "Gillefeeling (a calendar date saying party, with confetti)", "gillefeeling: app icon"),
 ]
 THICKEN = {"wind": (13, (0x7F, 0xA9, 0x8E))}
 
