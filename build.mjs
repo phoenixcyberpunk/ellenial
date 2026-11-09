@@ -43,7 +43,7 @@ const CREDIT_GROUPS = [
 ]
 // App ids in credits.json → the names on the library. Cost splitting's name differs per language.
 const APP_NAMES = { site: 'ellenial.app', luncheon: 'Lunch', weather: 'Weather', quiz: 'Quiz', poll: 'Poll', bingo: 'Bingo',
-  maps: 'ellenial maps', 'party-games': 'Party games', gillefeeling: 'Gillefeeling', split: '{split_title}' }
+  maps: 'ellenial maps', 'party-games': 'Party games', gillefeeling: 'Gillefeeling', present: 'Present', split: '{split_title}' }
 // Strings the credits builder uses (not in a template, but required in every language all the same).
 const BUILD_KEYS = [...CREDIT_GROUPS.map((g) => g.key), 'credits_used_in', 'credits_support']
 const usedKeys = new Set([...templates.flatMap((t) => keysOf(t.html)), ...BUILD_KEYS].filter((k) => !automatic.has(k)))

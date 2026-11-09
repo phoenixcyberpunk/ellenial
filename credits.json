@@ -202,6 +202,34 @@
       "check": null
     },
     {
+      "id": "pdfjs",
+      "name": "PDF.js by Mozilla",
+      "url": "https://mozilla.github.io/pdf.js/",
+      "type": "code",
+      "licence": "Apache-2.0",
+      "required": false,
+      "credit": "PDF reader: PDF.js by Mozilla",
+      "apps": [
+        "present"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
+      "id": "pptx-renderer",
+      "name": "pptx-renderer by aiden0z",
+      "url": "https://github.com/aiden0z/pptx-renderer",
+      "type": "code",
+      "licence": "Apache-2.0",
+      "required": false,
+      "credit": "PowerPoint reader: pptx-renderer by aiden0z",
+      "apps": [
+        "present"
+      ],
+      "support": null,
+      "check": null
+    },
+    {
       "id": "fraunces",
       "name": "Fraunces",
       "url": "https://github.com/undercasetype/Fraunces",
@@ -219,7 +247,8 @@
         "poll",
         "split",
         "gillefeeling",
-        "bingo"
+        "bingo",
+        "present"
       ],
       "support": null,
       "check": null
@@ -242,7 +271,8 @@
         "poll",
         "split",
         "gillefeeling",
-        "bingo"
+        "bingo",
+        "present"
       ],
       "support": null,
       "check": "Gillefeeling live still uses Instrument Sans (DM Sans waits on staging)"
