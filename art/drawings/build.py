@@ -59,6 +59,8 @@ DRAWINGS = [
   ("maps", "ellenial maps (folded map with a red pin)", "maps: app icon"),
   ("split", "Split (banknote with arrows to three people; dark arrows, for light backgrounds)", "split: app icon"),
   ("split-dark", "Split (the same with light arrows, for a dark page)", "split: drawing on a dark page"),
+  # present (9 Nov 2026): app icon drawing, on an apricot circle (#F6D2BF) on the tile
+  ("present", "Present (a phone and a big screen, both with a tick, an arrow from one to the other)", "present: app icon"),
 ]
 THICKEN = {"wind": (13, (0x7F, 0xA9, 0x8E))}
 

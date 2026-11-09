@@ -385,6 +385,14 @@
    "usedIn": "split: drawing on a dark page",
    "width": 512,
    "height": 512
+  },
+  {
+   "name": "present",
+   "file": "https://ellenial.app/drawings/present.png",
+   "shows": "Present (a phone and a big screen, both with a tick, an arrow from one to the other)",
+   "usedIn": "present: app icon",
+   "width": 512,
+   "height": 512
   }
  ]
 }
