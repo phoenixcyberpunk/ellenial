@@ -123,4 +123,6 @@ for (const [family, weights] of FONTS) {
     copyFileSync(`node_modules/@fontsource/${family}/files/${file}`, `dist/fonts/${file}`)
   }
 }
+// Fraunces italic for the notes line in the shared Ellenial footer (9 Nov 2026)
+copyFileSync('node_modules/@fontsource/fraunces/files/fraunces-latin-400-italic.woff2', 'dist/fonts/fraunces-latin-400-italic.woff2')
 console.log(`Built dist/: ${PAGES.length} pages × ${LANGUAGES.map((l) => '/' + l.dir).join(', ')}`)

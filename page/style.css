@@ -90,3 +90,12 @@
   .app.linked h3 a::before { content:""; position:absolute; inset:0; border-radius:inherit; }
   .app.linked h3 a:focus-visible { outline:none; }
   .app.linked:focus-within { outline:2px solid var(--indigo); outline-offset:2px; }
+
+/* Ellenial shared footer (9 Nov 2026): the same lines, order and look as every app. */
+@font-face { font-family:'Fraunces'; font-style:italic; font-weight:400; font-display:swap; src:url('/fonts/fraunces-latin-400-italic.woff2') format('woff2'); }
+.ell-foot { display:flex; flex-direction:column; align-items:center; gap:16px; border-top:1px solid var(--line); padding:32px 16px 40px; text-align:center; font-family:'DM Sans', system-ui, sans-serif; font-size:13px; line-height:18px; color:var(--muted); }
+.ell-foot p { margin:0; }
+.ell-foot a { color:var(--indigo); }
+.ell-notes { display:flex; flex-direction:column; gap:4px; font-family:'Fraunces', Georgia, serif; font-style:italic; font-weight:400; line-height:19px; }
+.ell-shared { display:flex; flex-direction:column; gap:6px; }
+.ell-controls { display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; }
