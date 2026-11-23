@@ -4,6 +4,8 @@
     no cookie, no id. (Plain text by Ellen's choice, 23 Nov: a message written to her is meant for her eyes.)
   - Only the live site sends. On previews and local tests the form works but says nothing is sent.
   - ?app=<id> preselects the app (for the "Feedback" link in each app's footer).
+  - On the home page the form opens inside the feedback card (no new page); "Close" folds it back.
+    Without scripts, the card's button is a plain link to /feedback.
 */
 (function () {
   'use strict';
@@ -22,11 +24,16 @@
   var sendLabel = send.textContent;
 
   if (!live) $('fbPreview').hidden = false;
+  var inCard = !!$('fbInline');
+  var hideOnDone = function (hidden) {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-fb-hide-on-done]'), function (el) { el.hidden = hidden; });
+  };
 
   // Preselect the app from ?app=lunch
   try {
     var wanted = new URLSearchParams(location.search).get('app');
     if (wanted && app.querySelector('option[value="' + wanted.replace(/[^a-z0-9-]/g, '') + '"]')) app.value = wanted;
+    else if (inCard) app.value = 'site';
   } catch (e) { /* old browser: keep the default */ }
 
   function updateCount() {
@@ -63,10 +70,21 @@
   function done(kind) {
     $('fbSummary').textContent = kindLabel(kind) + ' · ' + app.options[app.selectedIndex].text;
     $('fbFormView').hidden = true;
+    hideOnDone(true);
     var view = $('fbDoneView');
     view.hidden = false;
-    view.focus();
-    window.scrollTo(0, 0);
+    view.focus({ preventScroll: true });
+    if (inCard) $('feedback').scrollIntoView({ block: 'start' });
+    else window.scrollTo(0, 0);
+  }
+
+  function reset() {
+    msg.value = '';
+    updateCount();
+    showError('');
+    $('fbDoneView').hidden = true;
+    $('fbFormView').hidden = false;
+    hideOnDone(false);
   }
 
   form.addEventListener('submit', function (ev) {
@@ -94,11 +112,28 @@
       .then(function () { send.disabled = false; send.textContent = sendLabel; });
   });
 
-  $('fbAgain').addEventListener('click', function () {
-    msg.value = '';
-    updateCount();
-    $('fbDoneView').hidden = true;
-    $('fbFormView').hidden = false;
-    msg.focus();
-  });
+  $('fbAgain').addEventListener('click', function () { reset(); msg.focus(); });
+
+  // Home page: open and close the form inside the card.
+  if (inCard) {
+    var openBtn = $('fbOpen'), back = $('fbBack');
+    var setOpen = function (open) {
+      $('fbIntro').hidden = open;
+      $('fbInline').hidden = !open;
+      openBtn.setAttribute('aria-expanded', String(open));
+    };
+    openBtn.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      setOpen(true);
+      msg.focus({ preventScroll: true });
+    });
+    back.textContent = back.dataset.close;
+    back.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      reset();
+      setOpen(false);
+      $('feedback').scrollIntoView({ block: 'start' });
+      openBtn.focus({ preventScroll: true });
+    });
+  }
 })();

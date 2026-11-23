@@ -23,7 +23,8 @@
 <link rel="preload" href="/fonts/fraunces-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-<!--include:style.css--></style>
+<!--include:style.css-->
+<!--include:feedback.css--></style>
 </head>
 <body>
 
@@ -185,14 +186,18 @@
 </section>
 
 <section class="wrap" style="padding-bottom:var(--section)">
-  <div class="idea" id="feedback" style="padding:48px 40px; border-radius:24px; background:var(--indigo); color:var(--on-indigo); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px">
-    <div style="flex:1 1 360px; min-width:0">
+  <!-- Feedback (23 Nov 2026): the form opens inside this card. Without scripts the button is a plain link to /feedback. -->
+  <div class="idea fb-card" id="feedback">
+    <div data-fb-hide-on-done>
       <h2 class="serif" style="font-size:clamp(28px, 4.5vw, 36px)">{{idea_title}}</h2>
-      <p style="margin:8px 0 0; color:var(--on-indigo); font-size:18px">{{idea_lead}}</p>
+      <p style="margin:8px 0 0; font-size:18px">{{idea_lead}}</p>
     </div>
-    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:12px; max-width:340px">
-      <a href="{{href_feedback}}" class="btn" style="background:var(--peach); color:var(--night)">{{idea_button}}</a>
-      <p style="margin:0; font-size:15px">{{idea_small}}</p>
+    <div id="fbIntro" class="fb-intro">
+      <a id="fbOpen" href="{{href_feedback}}" class="btn fb-send" aria-expanded="false" aria-controls="fbInline">{{idea_button}}</a>
+      <p class="muted" style="margin:0; font-size:15px">{{idea_small}}</p>
+    </div>
+    <div id="fbInline" class="fb-inline" hidden>
+<!--include:feedback-form.html-->
     </div>
   </div>
 </section>
@@ -210,6 +215,7 @@
 </footer>
 
 <script src="/app.js" defer></script>
+<script src="/feedback.js" defer></script>
 <script src="/visit-counter.js" defer></script>
 </body>
 </html>

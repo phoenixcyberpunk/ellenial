@@ -136,5 +136,6 @@
   "fb_done_back": "Tillbaka till Ellenial",
   "fb_done_again": "Skicka ett till",
   "footer_feedback": "Feedback",
-  "idea_small": "Inget konto, ingen e-post. Ditt namn bara om du vill."
+  "idea_small": "Inget konto, ingen e-post. Ditt namn bara om du vill.",
+  "fb_done_close": "Stäng"
 }
