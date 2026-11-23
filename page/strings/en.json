@@ -123,7 +123,7 @@
   "fb_app_new": "Something that doesn't exist yet",
   "fb_msg_label": "Your message",
   "fb_msg_placeholder": "Write as much or as little as you like.",
-  "fb_privacy": "No account, no email, no tracking. I keep only your message and which app it's about. Want me to know who you are? Write your name in the message, or don't: it's up to you. This is one-way, so I can't reply.",
+  "fb_privacy": "Don't include any personal details - unless you want to. I can't reply to your feedback, but I'm grateful to receive it! 🫶",
   "fb_send": "Send to Ellen",
   "fb_sending": "Sending…",
   "fb_err_empty": "Write a few words first.",
@@ -136,6 +136,5 @@
   "fb_done_back": "Back to Ellenial",
   "fb_done_again": "Send another",
   "footer_feedback": "Feedback",
-  "idea_small": "Don't include any personal details - unless you want to.",
   "fb_done_close": "Close"
 }

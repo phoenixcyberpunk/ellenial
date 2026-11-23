@@ -123,7 +123,7 @@
   "fb_app_new": "Något som inte finns än",
   "fb_msg_label": "Ditt meddelande",
   "fb_msg_placeholder": "Skriv så mycket eller lite du vill.",
-  "fb_privacy": "Inget konto, ingen e-post, ingen spårning. Jag sparar bara ditt meddelande och vilken app det gäller. Vill du att jag ska veta vem du är? Skriv ditt namn i meddelandet, eller låt bli: det bestämmer du. Det här är enkelriktat, så jag kan inte svara.",
+  "fb_privacy": "Inkludera inga personliga uppgifter - såvida du inte själv vill. Jag kan inte svara på er feedback, men tar tacksamt emot den! 🫶",
   "fb_send": "Skicka till Ellen",
   "fb_sending": "Skickar…",
   "fb_err_empty": "Skriv några ord först.",
@@ -136,6 +136,5 @@
   "fb_done_back": "Tillbaka till Ellenial",
   "fb_done_again": "Skicka ett till",
   "footer_feedback": "Feedback",
-  "idea_small": "Inkludera inga personliga uppgifter - såvida du inte själv vill.",
   "fb_done_close": "Stäng"
 }
