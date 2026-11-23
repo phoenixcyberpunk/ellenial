@@ -11,7 +11,7 @@
   var SUPA = 'https://knvrvmqdxvcatsrvkrgx.supabase.co';
   var API_KEY = 'sb_publishable_5e3mg1E-r-P_to34ONwRfw_FQYUwy3z';
   var SESSION = 'ellenial-inbox-key';
-  var KINDS = { idea: 'An idea', broken: "Something's broken", kind: 'Kind words' };
+  var KINDS = { idea: 'An idea', broken: "Something's broken", kind: 'Feedback' };
   var APPS = { lunch: 'Lunch', weather: 'Weather', maps: 'Maps', quiz: 'Quiz', 'party-games': 'Party games',
     poll: 'Poll', bingo: 'Bingo', present: 'Present', split: 'Split', gillefeeling: 'Gillefeeling',
     site: 'ellenial.app', 'new': 'Something new' };
@@ -150,7 +150,7 @@
       messages = [
         { id: 'a', kind: 'broken', app: 'weather', created_at: new Date(now - h).toISOString(), kept: false, message: '[Sample] A visitor’s message about what went wrong would show here.' },
         { id: 'b', kind: 'idea', app: 'lunch', created_at: new Date(now - 26 * h).toISOString(), kept: false, message: '[Sample] A visitor’s idea would show here.\nLine breaks are kept.' },
-        { id: 'c', kind: 'kind', app: 'site', created_at: new Date(now - 60 * h).toISOString(), kept: true, message: '[Sample] Kind words would show here.' }
+        { id: 'c', kind: 'kind', app: 'site', created_at: new Date(now - 60 * h).toISOString(), kept: true, message: '[Sample] Feedback would show here.' }
       ];
       show('vInbox'); render();
     });
