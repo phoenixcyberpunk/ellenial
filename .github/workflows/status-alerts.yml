@@ -1,0 +1,33 @@
+name: Status alerts
+
+# Every half hour: read the Ellenial status that Supabase keeps (checked every 10 minutes there)
+# and email Ellen, through a GitHub issue opened by the bot, when something needs her.
+# Minutes 19 and 49 avoid GitHub's busy :00. If GitHub skips a run, the next one catches up;
+# the dashboard itself doesn't depend on this workflow.
+on:
+  schedule:
+    - cron: '19,49 * * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+concurrency:
+  group: status-alerts
+  cancel-in-progress: false
+
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: ops
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Open or close alert issues
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node ops/alerts.mjs

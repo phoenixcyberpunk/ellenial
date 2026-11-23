@@ -32,6 +32,15 @@ Build locally: `npm install && npm run build`, then open `dist/index.html`.
 - Ellen reads them at `/inbox` (English only, not linked, noindex) with her inbox key from her password manager. The database keeps only the key's hash. Keep, or "Done, delete" (two taps).
 - On previews and locally, the form says nothing is sent, and the inbox can show sample messages.
 
+## Status checks and alerts (23 Nov 2026)
+
+Ellen sees whether every Ellenial app is healthy on her own private dashboard, without anyone refreshing it:
+
+- **Checking** happens in Supabase: pg_cron runs `ops.tick()` every 10 minutes. It opens every Ellenial site and the outside sources the apps depend on (Lunch's menus, the menu reader's GitHub runs and its open "Lunch alert" issues, maps' places, photos in Cloudflare R2 and OpenFreeMap tiles, SMHI, Open-Meteo and MET Norway), checks the free database size, and once a day the ellenial.app and ellenial.org renewal dates. One row per thing in `ops.status`, with "since". Nothing about visitors is read. See `supabase/migrations/20261123130000_ops_status_checker.sql`; add a site by adding a row to `ops.checks`.
+- **Alerts** come by email: `.github/workflows/status-alerts.yml` runs `ops/alerts.mjs` every half hour. It reads the status through one public, read-only function (`ellenial_status()`, Ellenial's public sites only) and opens one "Ellenial alert: …" issue per problem as the github-actions bot, which GitHub emails to Ellen. The issue closes itself when it's fine again. It also alerts if the checker itself stops. Lunch's menu places are left to Lunch's own watchdog.
+- No keys to renew: the workflow uses GitHub's own token and the public Supabase key.
+- Changes to these files don't redeploy the site (`ignoreCommand` in `vercel.json`).
+
 ## Drawings
 
 Ellen's hand-drawn icons (Procreate) live in one place for every Ellenial app: **ellenial.app/drawings** shows them all, `drawings.json` lists them for apps, and each is a 512 px PNG at `ellenial.app/drawings/<name>.png`. Originals (1024 px) and the build script are in `art/drawings`; run `python3 art/drawings/build.py` after adding or changing one. Other Ellenial sites can load them directly (they're served with `Cross-Origin-Resource-Policy: cross-origin`), or copy them in. The drawings are licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (credit Ellen Nilsson / Ellenial, no commercial use, remixes under the same licence), separately from the AGPL-3.0 code.
