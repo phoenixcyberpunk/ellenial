@@ -43,7 +43,7 @@
   "v6_title": "Costs in the open",
   "v6_text": "The receipt above is updated every month. Making profits will never be the goal.",
   "idea_title": "Tell me what you think",
-  "idea_lead": "Something broken, an idea, or just kind words? I read every message myself.",
+  "idea_lead": "Write what you think below, and I'll read it when I can.",
   "idea_button": "Send feedback",
   "footer_tagline": "Being human is enough.",
   "footer_counter": "On this site: a simple site visit counter",
@@ -111,7 +111,7 @@
   "thanks_paid": "Paid services, like hosting, the database and the AI that helps me write the code, aren't listed here. Paying for them is my thanks, and you'll find them on the receipt.",
   "fb_page_title": "Feedback · Ellenial",
   "fb_title": "Tell me what you think",
-  "fb_lead": "I'm one person, so every message lands with me.",
+  "fb_lead": "Write what you think below, and I'll read it when I can.",
   "fb_preview": "Preview: the form works, but nothing is sent from here.",
   "fb_noscript": "The form needs JavaScript to send your message.",
   "fb_kind_legend": "What is it?",
@@ -136,6 +136,6 @@
   "fb_done_back": "Back to Ellenial",
   "fb_done_again": "Send another",
   "footer_feedback": "Feedback",
-  "idea_small": "No account, no email. Your name only if you want to.",
+  "idea_small": "Don't include any personal details - unless you want to.",
   "fb_done_close": "Close"
 }
