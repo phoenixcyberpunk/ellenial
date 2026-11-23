@@ -2,6 +2,7 @@
 // - A choice made with the EN | SV switch wins, and is remembered on this phone only (localStorage).
 // - Otherwise the phone's own language setting decides: Swedish phones get /sv, everyone else English.
 // - Only English pages ever redirect, each to its Swedish twin (/ → /sv, /thanks → /sv/thanks). A link to /sv always opens in Swedish, so it can be shared.
+//   The query is kept, so /feedback?app=lunch still has Lunch chosen in Swedish.
 // Loaded in <head> without defer, so the switch happens before the page is drawn (no flash).
 (function () {
   var KEY = 'ellenial-lang';
@@ -34,9 +35,9 @@
     // that asked for English is never bounced back to Swedish. The address bar is tidied straight after.
     if (/[?&]lang=en(&|$)/.test(location.search)) {
       remember('en');
-      try { history.replaceState(null, '', location.pathname + location.hash); } catch (e) {}
+      try { var q = location.search.replace(/([?&])lang=en(&|$)/, '$1').replace(/[?&]$/, ''); history.replaceState(null, '', location.pathname + q + location.hash); } catch (e) {}
     } else if ((remembered() || phoneLanguage()) === 'sv') {
-      location.replace('/sv' + (location.pathname === '/' ? '' : location.pathname) + location.hash);
+      location.replace('/sv' + (location.pathname === '/' ? '' : location.pathname) + location.search + location.hash);
     }
   }
 

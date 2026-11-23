@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- Ellen's feedback inbox (23 Nov 2026). English only, linked from nowhere, noindex.
+     Opened with Ellen's inbox key (kept in her password manager). No email, no account.
+     The database keeps only the key's hash and checks it on every call. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox · Ellenial</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#FEF2E2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17141F" media="(prefers-color-scheme: dark)">
+<script src="/ellenial-theme.js" data-light="#FEF2E2" data-dark="#17141F"></script>
+<style>
+<!--include:style.css-->
+<!--include:feedback.css-->
+  .ib-top { display:flex; justify-content:space-between; align-items:center; gap:12px; min-height:44px; }
+  .ib-eyebrow { font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); }
+  .ib-filters { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .ib-filters select { width:auto; min-height:44px; margin:0; }
+  .ib-list { display:flex; flex-direction:column; gap:12px; }
+  .ib-card { padding:16px; border-radius:16px; background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column; gap:10px; }
+  .ib-meta { font-size:14px; color:var(--muted); }
+  .ib-text { margin:0; font-size:16px; line-height:1.55; white-space:pre-wrap; overflow-wrap:anywhere; }
+  .ib-row { display:flex; gap:8px; }
+  .ib-row .btn { flex:1; justify-content:center; min-height:44px; font-size:15px; }
+  .ib-row .fb-send { min-height:44px; font-size:15px; }
+  .ib-row .fb-ghost { min-height:44px; font-size:15px; }
+  .ib-empty { margin:0; padding:24px; text-align:center; color:var(--muted); }
+  .ib-link { background:none; border:0; padding:0; min-height:44px; font:inherit; font-size:15px; color:var(--indigo); text-decoration:underline; cursor:pointer; }
+</style>
+</head>
+<body>
+<main class="wrap fb">
+  <p id="ibPreview" class="fb-preview" hidden>Preview: the inbox only opens on ellenial.app. <button type="button" id="ibDemo" class="ib-link">Show sample messages</button></p>
+
+  <div class="ib-top">
+    <span class="ib-eyebrow">Ellenial · only you</span>
+    <span id="ibCount" class="ib-meta"></span>
+  </div>
+
+  <!-- 1. Unlock with the inbox key (from the password manager) -->
+  <section id="vUnlock" class="fb-view" hidden>
+    <h1 class="serif">Feedback</h1>
+    <form id="fUnlock" class="fb-form">
+      <!-- A fixed username, so password managers know which saved key to offer. -->
+      <input type="text" name="username" value="ellenial-inbox" autocomplete="username" hidden>
+      <label class="fb-field" for="ibKey">Inbox key</label>
+      <input id="ibKey" class="fb-input" type="password" autocomplete="current-password" required>
+      <p id="ibUnlockMsg" class="fb-error" role="alert" hidden></p>
+      <button class="btn fb-send" type="submit">Open the inbox</button>
+    </form>
+  </section>
+
+  <!-- 2. The inbox -->
+  <section id="vInbox" class="fb-view" hidden>
+    <h1 class="serif">Feedback</h1>
+    <div class="ib-filters" role="group" aria-label="Show">
+      <label class="chip-radio"><input type="radio" name="show" value="new" checked><span>New</span></label>
+      <label class="chip-radio"><input type="radio" name="show" value="kept"><span>Kept</span></label>
+      <label class="sr-only" for="ibApp">App</label>
+      <select id="ibApp" class="fb-input"><option value="">All apps</option></select>
+    </div>
+    <div id="ibList" class="ib-list" aria-live="polite"></div>
+    <p><button type="button" id="ibSignOut" class="ib-link">Close the inbox</button></p>
+  </section>
+</main>
+<script src="/inbox.js" defer></script>
+</body>
+</html>

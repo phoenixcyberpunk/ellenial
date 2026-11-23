@@ -13,7 +13,7 @@ Made by Ellen, one person, with AI helping on the code.
 
 ## How the site works
 
-- One static page, in English (`/`) and Swedish (`/sv`). No cookies, no analytics, no forms, no database.
+- Static pages, in English (`/`) and Swedish (`/sv`). No cookies, no analytics. One form: `/feedback` (below).
 - `page/index.html` is the layout; the words live in `page/strings/en.json` and `page/strings/sv.json`. The build writes one page per language and stops if a language is missing a text.
 - The receipt's numbers and "last updated" date live once in `page/receipt.json`, shared by both languages.
 - Language: an EN | SV switch in the header. Without a choice, the phone's own language setting decides (Swedish phones get `/sv`, everyone else English). This is read on the phone only (`site/lang.js`); nothing about the visitor is sent or looked up. A choice made with the switch is remembered on that phone only. A link to `/sv` always opens in Swedish.
@@ -22,6 +22,15 @@ Made by Ellen, one person, with AI helping on the code.
 - Hosted on Vercel: every push to `main` deploys to ellenial.app.
 
 Build locally: `npm install && npm run build`, then open `dist/index.html`.
+
+## Feedback (`/feedback`, 23 Nov 2026)
+
+- One-way and anonymous: pick what it is (an idea, something's broken, kind words) and which app, write up to 1,000 characters. No account, no email, no reply. `?app=<id>` preselects the app, so each app's footer can link straight here.
+- The page sends only those three things (`site/feedback.js`), to a Supabase function in the shared project (`supabase/migrations/20261123120000_ellenial_feedback.sql`). Nothing about the sender is stored.
+- Messages are plain text: they're written to Ellen, for her to read.
+- Spam: a hidden trap field, at most 200 messages an hour in total, at most 1,000 unread waiting.
+- Ellen reads them at `/inbox` (English only, not linked, noindex) with her inbox key from her password manager. The database keeps only the key's hash. Keep, or "Done, delete" (two taps).
+- On previews and locally, the form says nothing is sent, and the inbox can show sample messages.
 
 ## Drawings
 

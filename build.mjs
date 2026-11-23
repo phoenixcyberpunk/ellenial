@@ -24,6 +24,9 @@ const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'))
 const PAGES = [
   { file: 'index.html', slug: '' },
   { file: 'thanks.html', slug: 'thanks' },
+  { file: 'feedback.html', slug: 'feedback' },
+  // Ellen's feedback inbox: English only, not linked from anywhere, noindex.
+  { file: 'inbox.html', slug: 'inbox', langs: ['en'] },
 ]
 // <!--include:name--> pulls in page/<name>, so both pages share one stylesheet.
 const loadTemplate = (file) => readFileSync(`page/${file}`, 'utf8')
@@ -32,7 +35,7 @@ const templates = PAGES.map((p) => ({ ...p, html: loadTemplate(p.file) }))
 const receipt = readJson('page/receipt.json')
 const credits = readJson('credits.json')
 const keysOf = (html) => [...new Set([...html.matchAll(/\{\{(\w+)\}\}/g)].map((m) => m[1]))]
-const automatic = new Set(['lang', 'current_en', 'current_sv', 'href_en', 'href_sv', 'href_home', 'href_thanks', 'credits_list'])
+const automatic = new Set(['lang', 'current_en', 'current_sv', 'href_en', 'href_sv', 'href_home', 'href_thanks', 'href_feedback', 'credits_list'])
 
 // The /thanks list, built from credits.json. Groups and their order; each needs a heading in the strings.
 const CREDIT_GROUPS = [
@@ -93,6 +96,7 @@ for (const { lang, dir, locale } of LANGUAGES) {
   }
 
   for (const page of templates) {
+    if (page.langs && !page.langs.includes(lang)) continue
     // Each language's address for this page: English at the root, Swedish under /sv.
     const path = (l) => {
       const d = LANGUAGES.find((x) => x.lang === l).dir
@@ -101,7 +105,7 @@ for (const { lang, dir, locale } of LANGUAGES) {
     }
     const home = dir ? `/${dir}` : '/'
     const values = { ...text, lang, href_en: path('en'), href_sv: path('sv'), href_home: home,
-      href_thanks: (dir ? `/${dir}` : '') + '/thanks' }
+      href_thanks: (dir ? `/${dir}` : '') + '/thanks', href_feedback: (dir ? `/${dir}` : '') + '/feedback' }
     for (const other of LANGUAGES) values[`current_${other.lang}`] = other.lang === lang ? 'aria-current="page"' : ''
     if (keysOf(page.html).includes('credits_list')) values.credits_list = creditsList(lang, strings)
 
@@ -125,4 +129,4 @@ for (const [family, weights] of FONTS) {
 }
 // Fraunces italic for the notes line in the shared Ellenial footer (9 Nov 2026)
 copyFileSync('node_modules/@fontsource/fraunces/files/fraunces-latin-400-italic.woff2', 'dist/fonts/fraunces-latin-400-italic.woff2')
-console.log(`Built dist/: ${PAGES.length} pages × ${LANGUAGES.map((l) => '/' + l.dir).join(', ')}`)
+console.log(`Built dist/: ${PAGES.length} pages (inbox in English only) × ${LANGUAGES.map((l) => '/' + l.dir).join(', ')}`)

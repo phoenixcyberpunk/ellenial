@@ -1,0 +1,39 @@
+  /* /feedback (23 Nov 2026): one narrow column, phone first. */
+  .fb { max-width:600px; padding-top:calc(var(--section) * .4); padding-bottom:var(--section); }
+  .fb-view { display:flex; flex-direction:column; gap:22px; }
+  .fb-view[hidden] { display:none; }
+  .fb h1 { font-size:clamp(28px, 4.5vw, 36px); }
+  .fb-lead { margin:8px 0 0; font-size:17px; }
+  .fb-form { display:flex; flex-direction:column; gap:10px; }
+  .fb-kinds { border:0; margin:0 0 12px; padding:0; }
+  .fb-kinds legend, .fb-field { padding:0; margin:0 0 8px; font-size:15px; font-weight:500; }
+  .fb-field { margin:0; }
+  .fb-chips { display:flex; flex-wrap:wrap; gap:8px; }
+  /* Real radio buttons, drawn as pills: keyboard, screen readers and no-JS all work. */
+  .chip-radio { position:relative; }
+  .chip-radio input { position:absolute; opacity:0; inset:0; margin:0; cursor:pointer; }
+  .chip-radio span { display:inline-flex; align-items:center; min-height:44px; padding:0 18px; border-radius:999px; border:1.5px solid var(--indigo); font-size:15px; font-weight:500; }
+  .chip-radio input:checked + span { background:var(--indigo); color:var(--on-indigo); }
+  .chip-radio input:checked + span::before { content:"✓ "; white-space:pre; }
+  .chip-radio input:focus-visible + span { outline:2px solid var(--indigo); outline-offset:2px; }
+  .fb-input { width:100%; min-height:48px; padding:10px 14px; border-radius:12px; border:1.5px solid var(--indigo); background:var(--card); color:var(--night); font:inherit; font-size:16px; }
+  textarea.fb-input { line-height:1.5; resize:vertical; margin-top:0; }
+  select.fb-input { margin-bottom:12px; }
+  .fb-input:focus-visible { outline:2px solid var(--indigo); outline-offset:2px; }
+  .fb-count { margin:0; text-align:right; font-size:14px; }
+  .fb-count.near { color:var(--night); font-weight:600; }
+  .fb-privacy { margin:4px 0 6px; font-size:14px; line-height:1.5; }
+  .fb-error { margin:0; padding:12px 14px; border-radius:12px; background:var(--lavender); color:var(--night); font-size:15px; }
+  .fb-send { justify-content:center; min-height:52px; border:0; background:var(--indigo); color:var(--on-indigo); font-size:17px; }
+  .fb-send:hover { color:var(--on-indigo); opacity:.92; }
+  .fb-send[disabled] { opacity:.6; cursor:progress; }
+  .fb-ghost { justify-content:center; min-height:52px; border:1.5px solid var(--indigo); background:transparent; color:var(--night); font-size:17px; }
+  .fb-trap { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
+  .fb-preview { margin:0 0 20px; padding:10px 14px; border-radius:12px; background:var(--periwinkle); color:var(--night); font-size:14px; font-weight:500; }
+  .fb-done { align-items:center; text-align:center; padding-top:24px; }
+  .fb-done:focus { outline:none; }
+  .fb-drawing { width:120px; height:120px; border-radius:20px; background:var(--card); }
+  .fb-done .fb-lead { max-width:340px; margin:0; }
+  .fb-sent { align-self:stretch; display:flex; flex-direction:column; gap:2px; padding:16px; border-radius:16px; background:var(--card); border:1px solid var(--line); text-align:left; font-size:14px; }
+  .fb-summary { font-size:16px; font-weight:500; }
+  .fb-actions { align-self:stretch; display:flex; flex-direction:column; gap:10px; margin-top:8px; }

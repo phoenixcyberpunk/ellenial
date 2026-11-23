@@ -185,14 +185,14 @@
 </section>
 
 <section class="wrap" style="padding-bottom:var(--section)">
-  <div class="idea" style="padding:48px 40px; border-radius:24px; background:var(--indigo); color:var(--on-indigo); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px">
+  <div class="idea" id="feedback" style="padding:48px 40px; border-radius:24px; background:var(--indigo); color:var(--on-indigo); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px">
     <div style="flex:1 1 360px; min-width:0">
       <h2 class="serif" style="font-size:clamp(28px, 4.5vw, 36px)">{{idea_title}}</h2>
       <p style="margin:8px 0 0; color:var(--on-indigo); font-size:18px">{{idea_lead}}</p>
     </div>
     <div style="display:flex; flex-direction:column; align-items:flex-start; gap:12px; max-width:340px">
-      <button type="button" id="ideaBtn" class="btn" style="background:var(--peach); color:var(--night); border:0" aria-expanded="false" aria-controls="ideaMsg">{{idea_button}}</button>
-      <p id="ideaMsg" role="status" hidden style="margin:0; font-size:16px">{{idea_message}}</p>
+      <a href="{{href_feedback}}" class="btn" style="background:var(--peach); color:var(--night)">{{idea_button}}</a>
+      <p style="margin:0; font-size:15px">{{idea_small}}</p>
     </div>
   </div>
 </section>
@@ -204,7 +204,7 @@
     <p>{{v5_title}}.</p>
     <p>{{footer_promise}}</p>
     <p>{{footer_counter}}</p>
-    <p><a href="https://github.com/phoenixcyberpunk/ellenial">{{footer_code}}</a> · <a href="{{href_thanks}}">{{footer_thanks}}</a></p>
+    <p><a href="https://github.com/phoenixcyberpunk/ellenial">{{footer_code}}</a> · <a href="{{href_thanks}}">{{footer_thanks}}</a> · <a href="{{href_feedback}}">{{footer_feedback}}</a></p>
   </div>
   <div class="ell-controls"><span id="themeSlot" data-label="{{theme_label}}" data-auto="{{theme_auto}}" data-light="{{theme_light}}" data-dark="{{theme_dark}}" data-hint="{{theme_auto_hint}}"></span></div>
 </footer>
