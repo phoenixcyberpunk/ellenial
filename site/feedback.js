@@ -127,6 +127,14 @@
       setOpen(true);
       msg.focus({ preventScroll: true });
     });
+    // Hero badge (25 Nov 2026): open the form in the card and bring the card into view.
+    var badge = $('fbBadge');
+    if (badge) badge.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      setOpen(true);
+      $('feedback').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      msg.focus({ preventScroll: true });
+    });
     back.textContent = back.dataset.close;
     back.addEventListener('click', function (ev) {
       ev.preventDefault();

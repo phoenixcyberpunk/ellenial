@@ -43,10 +43,17 @@
 </header>
 
 <main>
-<section id="top" class="wrap" style="padding-top:calc(var(--section) * .5); padding-bottom:calc(var(--section) * .75); display:flex; flex-direction:column; gap:18px">
-  <p class="eyebrow">{{hero_eyebrow}}</p>
-  <h1 class="serif">{{hero_title}}</h1>
-  <p class="muted lead">{{hero_lead}}</p>
+<section id="top" class="wrap hero" style="padding-top:calc(var(--section) * .5); padding-bottom:calc(var(--section) * .75)">
+  <div class="hero-text">
+    <p class="eyebrow">{{hero_eyebrow}}</p>
+    <h1 class="serif">{{hero_title}}</h1>
+    <p class="muted lead">{{hero_lead}}</p>
+  </div>
+  <!-- Feedback badge (25 Nov 2026): Ellen's speech bubble and her drawn heart. Tapping opens the feedback form in the card below; without scripts it's a plain link to the card. -->
+  <a href="#feedback" id="fbBadge" class="fb-badge" aria-label="{{badge_aria}}">
+    <span class="fb-bubble" aria-hidden="true"><svg class="fb-bubble-shape" viewBox="0 0 260 54"><path d="M24,2 H218 A22,22 0 0 1 240,24 V28 Q240,42 256,48 Q236,50 224,42 Q220,46 216,46 H24 A22,22 0 0 1 2,24 A22,22 0 0 1 24,2 Z"/></svg><span class="fb-bubble-text">{{badge_text}}</span></span>
+    <span class="fb-circle" aria-hidden="true"><img src="/icons/heart.png" alt="" width="36" height="37"></span>
+  </a>
 </section>
 
 <div class="wrap section-break" aria-hidden="true"><img src="/icons/flower.svg" alt="" width="28" height="28"></div>

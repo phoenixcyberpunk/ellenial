@@ -31,6 +31,7 @@ Build locally: `npm install && npm run build`, then open `dist/index.html`.
 - Spam: a hidden trap field, at most 200 messages an hour in total, at most 1,000 unread waiting.
 - Ellen reads them at `/inbox` (English only, not linked, noindex) with her inbox key from her password manager. The database keeps only the key's hash. Keep, or "Done, delete" (two taps).
 - On previews and locally, the form says nothing is sent, and the inbox can show sample messages.
+- Hero badge (25 Nov 2026): a speech bubble ("Nu kan du lämna feedback! ❤️" / "You can now leave feedback! ❤️") beside a round badge with Ellen's drawn heart (`site/icons/heart.png`, cut from the ace of hearts in `art/drawings/party-games.png`). Tapping it opens the form in the home page card; without scripts it links to the card.
 
 ## Status checks and alerts (23 Nov 2026)
 
